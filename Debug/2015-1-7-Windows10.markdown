@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Windows 10"
+date:   2015-1-2 18:02:32 +0000
+categories: Windows 10
+---
+
+激活，KMS失败了，只能某宝。
+
+###开始菜单中增加一些程序，快捷方式放到这个文件夹就好了。
+>C:\Users\Muto\AppData\Roaming\Microsoft\Windows\Start Menu
+

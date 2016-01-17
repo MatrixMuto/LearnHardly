@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "Cocos2d Animation"
+date:   2015-1-2 18:02:32 +0000
+categories: jekyll update
+---
+
+
+
+[Jekyll docs][jekyll-docs]
+
+[jekyll-docs]: http://jekyllrb.com/docs/home
