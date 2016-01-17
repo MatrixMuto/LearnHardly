@@ -2,7 +2,7 @@
 layout: post
 title:  "Draw Call"
 date:   2015-1-3 21:02:32 +0000
-categories: jekyll update
+categories: unity3d
 ---
 
 http://ravenw.com/blog/2011/10/14/unity-optimization-of-draw-call/

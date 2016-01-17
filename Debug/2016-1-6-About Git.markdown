@@ -15,3 +15,12 @@ GitHub 的 配置命令
 
 >git config --global credential.helper wincred
 
+git push --set-upstream origin hexo
+
+git里origin是什么用？
+
+git里有base这个概念么？
+
+
+
+>已经有一个项目目录，怎么把它加入到我的GitHub上？

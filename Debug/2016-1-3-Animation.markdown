@@ -2,7 +2,7 @@
 layout: post
 title:  "Cocos2d Animation 2"
 date:   2015-1-3 18:02:32 +0000
-categories: jekyll update
+categories: cocos2d
 ---
 Dash Quest第一个界面有个小朋友跑步的动画，
 Google一下，可以用Cocos2d的序列帧动画来实现，

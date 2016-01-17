@@ -2,7 +2,7 @@
 layout: post
 title:  "像素游戏素材"
 date:   2015-1-2 18:02:32 +0000
-categories: jekyll update
+categories: Game
 ---
 精灵数据库
 http://spritedatabase.net/
