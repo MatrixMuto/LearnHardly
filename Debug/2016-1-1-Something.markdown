@@ -2,7 +2,7 @@
 layout: post
 title:  "什么东西"
 date:   2015-1-1 18:02:32 +0000
-categories: jekyll update
+categories: GameDev Cocos2d
 ---
 Application的类结构
 

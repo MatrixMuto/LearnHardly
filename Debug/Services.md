@@ -1,3 +1,5 @@
+#[Services](http://developer.android.com/guide/components/services.html)
+
 Service是一个组件，在后台执行长时间的操作。
 另一个App也可以启动service，service会继续在后台执行。
 1. service可以是一个activit启动，通过startService()，一但启动了，即使activtiy销毁了，它也还存在。
