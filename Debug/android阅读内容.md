@@ -42,3 +42,27 @@ Observable
 
 
 [Android UI性能优化详解](http://music4kid.github.io//android/2016/01/11/android-performance-ui/)
+
+#设计模式
+[Design patterns implemented in Java](https://github.com/iluwatar/java-design-patterns)
+[Programming Principles](http://webpro.github.io/programming-principles/)
+[Android源码设计模式分析](https://github.com/simple-android-framework/android_design_patterns_analysis)
+
+
+#大牛们
+[Mr.Simple](https://github.com/bboyfeiyu)
+[Rinc Liu](https://github.com/RincLiu) 类似的娃。。
+
+#水槽
+[Android问答类](https://github.com/android-cn/android-discuss/issues)
+
+
+#算法问题资料
+[Algorithms](https://github.com/pedrovgs/Algorithms)
+[算法介绍的博客](http://blog.csdn.net/v_JULY_v)
+
+#ACM
+
+
+#书
+深入理解Android 邓凡平
