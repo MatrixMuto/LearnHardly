@@ -1,5 +1,3 @@
-
-
 需求是:
 当前的TaskStack是：Activity A -> Activiy B-> Activity C
 此时发生事件，startActivity A
