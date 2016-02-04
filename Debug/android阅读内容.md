@@ -49,9 +49,11 @@ Observable
 [Android源码设计模式分析](https://github.com/simple-android-framework/android_design_patterns_analysis)
 
 
-#大牛们
-[Mr.Simple](https://github.com/bboyfeiyu)
-[Rinc Liu](https://github.com/RincLiu) 类似的娃。。
+#Follows
+* [Mr.Simple](https://github.com/bboyfeiyu)
+* Rinc Liu](https://github.com/RincLiu) 类似的娃。。
+* [Jake Wharton](https://github.com/JakeWharton)
+* [脉脉不得语](https://github.com/inferjay)
 
 #水槽
 [Android问答类](https://github.com/android-cn/android-discuss/issues)
@@ -63,6 +65,25 @@ Observable
 
 #ACM
 
+#JAVA
+* [Java Generics](https://docs.oracle.com/javase/tutorial/java/generics/types.html)
+这个基础知识对理解ReJava的代码非常重要。
 
 #书
 深入理解Android 邓凡平
+
+#Android Studio
+[IntelliJ IDEA Help](https://www.jetbrains.com/idea/help/meet-intellij-idea.html)
+
+#Android网络
+[retrofit](http://inthecheesefactory.com/blog/retrofit-2.0/en)
+
+
+#Markdown
+[Github上的Markdonw文档](https://help.github.com/articles/github-flavored-markdown/)
+
+[Markdown基本语法](https://help.github.com/articles/markdown-basics/)
+
+
+#Test
+![dddd](./image/SS License.jpg)
