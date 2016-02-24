@@ -40,4 +40,13 @@ public final static <T> Observable<T> defer(Func0<Observable<T>> observableFacto
     return create(new OnSubscribeDefer<T>(observableFactory));
 }
 ```
+Android 好用的库
+Butter Knife
+Retrolambda
 
+2011年就很流行 Rx 了。。
+LINQ是什么？
+LINQ (Language-Integrated Query)
+
+2012年NetFlix就搞出了RxJava了。。
+http://www.devtf.cn/?p=1221
