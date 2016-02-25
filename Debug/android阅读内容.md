@@ -87,3 +87,7 @@ Observable
 
 #Test
 ![dddd](./image/SS License.jpg)
+
+
+#Gradle
+[Gradle Docs](https://docs.gradle.org/current/release-notes)
