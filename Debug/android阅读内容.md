@@ -77,7 +77,8 @@ Observable
 
 #Android网络
 [retrofit](http://inthecheesefactory.com/blog/retrofit-2.0/en)
-
+#Android基础
+[strings.xml使用](http://developer.android.com/guide/topics/resources/string-resource.html#FormattingAndStyling)
 
 #Markdown
 [Github上的Markdonw文档](https://help.github.com/articles/github-flavored-markdown/)
