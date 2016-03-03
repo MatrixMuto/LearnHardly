@@ -92,3 +92,15 @@ Observable
 
 #Gradle
 [Gradle Docs](https://docs.gradle.org/current/release-notes)
+
+
+
+#RecyclerView
+[ItemClickSupport](http://www.littlerobots.nl/blog/Handle-Android-RecyclerView-Clicks)
+OnItemTouchListener
+
+#ButterKnife
+[index](http://jakewharton.github.io/butterknife/index.)
+
+
+https://www.livecoding.tv/
