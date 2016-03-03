@@ -91,3 +91,31 @@ Observable
 
 #Gradle
 [Gradle Docs](https://docs.gradle.org/current/release-notes)
+[深入理解 Gradle]( http://blog.csdn.net/innost/article/details/48228651)
+
+#Blog
+[阳春面的博客](https://www.aswifter.com/about/)
+
+
+
+#Retrofit
+想买的书
+[Retrofit Book](https://leanpub.com/retrofit-love-working-with-apis-on-android)
+[Retrofit Series Blog](https://futurestud.io/blog/retrofit-series-round-up)
+[Retrofit Homepage](http://square.github.io/retrofit/)
+
+#AndroidFlux
+http://androidflux.github.io/docs/overview.html#content
+[AndroidFlux入门] (http://www.jianshu.com/p/5aa9cbde299f)
+
+
+
+[GitHub API v3](https://developer.github.com/v3/)
+[GitHubAndroidSdk](https://github.com/gitskarios/GithubAndroidSdk)
+
+
+#Book
+Clean Code: A Handbook of Agile Software Craftsmanship
+
+#Android性能
+Battery Historian
