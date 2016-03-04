@@ -92,8 +92,9 @@ Observable
 
 #Gradle
 [Gradle Docs](https://docs.gradle.org/current/release-notes)
-<<<<<<< HEAD
-
+加速gradle构建可以参考我这篇博客：http://blog.csdn.net/maosidiaoxian/article/details/49583215
+统计构建过程各任务时间：https://github.com/eleventigers/gradle-build-timer-plugin
+统计各包方法数：https://github.com/KeepSafe/dexcount-gradle-plugin
 
 
 #RecyclerView
@@ -105,7 +106,7 @@ OnItemTouchListener
 
 
 https://www.livecoding.tv/
-=======
+
 [深入理解 Gradle]( http://blog.csdn.net/innost/article/details/48228651)
 
 #Blog
@@ -134,4 +135,3 @@ Clean Code: A Handbook of Agile Software Craftsmanship
 
 #Android性能
 Battery Historian
->>>>>>> 07163b640a15e9890d3590ebfa76db61d2158e6b
