@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
         scanf("%d\n",&T);
 //        clock_t time = clock();
         for (int t = 1; t <= T; t++) {
-        	
+//        	clock_t time = clock();
         	int N,K; 
 //            cin >> N >> K;
             scanf("%d %d",&N,&K);
@@ -58,7 +58,8 @@ int main(int argc, char** argv) {
 			for (int i=1;i<=N-2;i++){
             	j = i+2;
             	k = i+1;
-            	ans[i][j] = ans[k][k] + ans[i][k-1]>ans[k+1][j]?ans[i][k-1]:ans[k+1][j];
+            	ans[i][j] = ans[i+1][i+1] ;
+				ans[i][j]  += ans[i][i]>ans[j][j]?ans[i][i]:ans[j][j];
             	cho[i][j] = k;
 //            	cout << "ans[" << i << "][" << j << "]=" << ans[i][j]<< endl; 
 			}
@@ -68,11 +69,11 @@ int main(int argc, char** argv) {
 				{
 					j = i + n -1;
 					best = 2147483647;
-					for (k=i+1;k<=j-1;++k)
+					for (k=i;k<=j;++k)
 //					for (k=cho[i][j-1];k<=cho[i+1][j];++k)
 					{
 						temp = ans[k][k];
-						left = ans[i][k-1] ;
+						left = ans[i][k-1];
 						right = ans[k+1][j];
 						temp +=left>right?left:right;
 						if (temp < best)
@@ -80,13 +81,18 @@ int main(int argc, char** argv) {
 							best = temp;
 							cho[i][j] = k;
 						}
-//						cout << k << " ";
+//						if(left>right)
+//							break; 
+						cout << "ans[" << i << "][" << j << "]=";
+						cout << k << " " << left << " " << right << " " << ans[k][k]<< " " << temp << endl;
 					}
 					ans[i][j] = best; 
 //					cout << endl << "ans[" << i << "][" << j << "]=" << best<< endl; 
 				}
 			}
 			cout << ans[1][N] << endl;
+//			time = clock()- time;
+//			cout << ((float)time)/CLOCKS_PER_SEC << endl;
 	}
 	return 0;
 }
