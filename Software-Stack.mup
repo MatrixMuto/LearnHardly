@@ -1,0 +1,116 @@
+{
+  "title": "Software Stack",
+  "id": 1,
+  "formatVersion": 2,
+  "ideas": {
+    "1": {
+      "title": "Ubuntu",
+      "id": 2,
+      "ideas": {
+        "1": {
+          "title": "CLion",
+          "id": 6
+        },
+        "2": {
+          "title": "Android Studio",
+          "id": 7
+        },
+        "3": {
+          "title": "StarUML2",
+          "id": 8
+        },
+        "4": {
+          "title": "Chrome",
+          "id": 9,
+          "ideas": {
+            "1": {
+              "title": "Google Keep",
+              "id": 10,
+              "attr": {
+                "style": {}
+              }
+            },
+            "2": {
+              "title": "Mindmup",
+              "id": 18,
+              "attr": {
+                "style": {}
+              }
+            },
+            "3": {
+              "title": "GitHub",
+              "id": 20
+            }
+          }
+        },
+        "6": {
+          "title": "Command Line",
+          "id": 11,
+          "ideas": {
+            "1": {
+              "title": "tsocks",
+              "id": 13
+            },
+            "2": {
+              "title": "avplay",
+              "id": 14
+            },
+            "3": {
+              "title": "zip unzip",
+              "id": 24
+            },
+            "4": {
+              "title": "tar",
+              "id": 25
+            },
+            "5": {
+              "title": "wget",
+              "id": 27
+            },
+            "6": {
+              "title": "curl",
+              "id": 28
+            },
+            "7": {
+              "title": "ssh",
+              "id": 30
+            },
+            "0.5": {
+              "title": "sslocal",
+              "id": 15,
+              "attr": {
+                "style": {}
+              }
+            },
+            "0.25": {
+              "title": "git",
+              "id": 31,
+              "attr": {
+                "style": {}
+              }
+            }
+          }
+        },
+        "3.5": {
+          "title": "Visual Code",
+          "id": 23,
+          "attr": {
+            "style": {},
+            "attachment": {
+              "contentType": "text/html",
+              "content": "<a href=\"https://code.visualstudio.com/start\">https://code.visualstudio.com/start</a>"
+            }
+          }
+        }
+      }
+    },
+    "-10": {
+      "title": "Windows",
+      "id": 3,
+      "attr": {
+        "style": {}
+      }
+    }
+  },
+  "links": []
+}
