@@ -35,6 +35,12 @@
               "id": 18,
               "attr": {
                 "style": {}
+              },
+              "ideas": {
+                "1": {
+                  "title": "save to GitHub",
+                  "id": 32
+                }
               }
             },
             "3": {
