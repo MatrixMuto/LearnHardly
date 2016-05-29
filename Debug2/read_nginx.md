@@ -1,3 +1,6 @@
+#Read nginx-rtmp source code
+
+[here is xref]()
 #带着问题去看代码？
 1.找到读取配置文件的模块。
 2.ngx_process 有 single,master,signaller,worker,helper
