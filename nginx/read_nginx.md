@@ -6,8 +6,8 @@
 * [源码注释交流平台](http://www.imaotao.cn/xref/nginx-1.10.0/)
 * [深入理解Nginx](http://product.dangdang.com/23910258.html#catalog)
 * [org网上推荐的书](http://nginx.org/en/books.html)
-* [Mastring Nginx](http://product.dangdang.com/23655331.html#catalog)
-* [Nginx High Perfomance](http://product.dangdang.com/1900482176.html#catalog) [Pdf link](http://185.49.84.138/ebooks/Nginx-High-Performance[ebooksfeed.com].pdf)
+* [Mastring Nginx](http://product.dangdang.com/23655331.html#catalog) [PDF_LINk](http://pdf.th7.cn/down/files/1411/Mastering%20Nginx.pdf)
+* [Nginx High Perfomance](http://product.dangdang.com/1900482176.html#catalog) [PDF_LINK](http://185.49.84.138/ebooks/Nginx-High-Performance[ebooksfeed.com].pdf)
 
 ###core/nginx.c
 * main
