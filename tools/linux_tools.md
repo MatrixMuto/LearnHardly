@@ -1,18 +1,11 @@
-
-
 ##Books，WebPage Link
 
-
-
 ##Tools
-
 ###ls
-```
+* -h
 
-```
 
 ###grep
-
 
 
 ###netstat
@@ -41,12 +34,9 @@ netstat -l
 > --numeric , -n
        Show numerical addresses instead of trying to determine symbolic host, port or user names. 
 
-```
-```
-
 ###tail
 > tail - output the last part of files
-
+  tail -f
 
 
 ###tree
