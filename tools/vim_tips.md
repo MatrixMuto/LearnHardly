@@ -1,6 +1,7 @@
 
 
 
+##Vim Tab
 
 
 
@@ -17,6 +18,7 @@
 
 ##Searching
   [wiki](http://vim.wikia.com/wiki/Searching)
+  * Search word under cursor
   * '*'/'#' prev/next exact word
 
 ##Undo and Redo
@@ -50,7 +52,12 @@ ref:
 * 删除光标所在的Word
  ved vbd de
 
-* Search word under cursor
+* goto line 42
+  ```
+  42G
+  42gg
+  :42<CR>
+  ```
   
 * 公司/家里/其他电脑上,同步vim的配置
   通过GitHub来自定义吧.
