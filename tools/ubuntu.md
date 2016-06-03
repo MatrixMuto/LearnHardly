@@ -100,3 +100,5 @@ sudo dpkg-reconfigure ligh
 #How to enable or disable services?
 [answer of askubuntu](http://askubuntu.com/questions/19320/how-to-enable-or-disable-services)
 
+##Installation FromLinux
+[Installation FromLinux](https://help.ubuntu.com/community/Installation/FromLinux)
