@@ -57,6 +57,4 @@ export ANDROID_SDK=/home/wq1950/Software/android-sdk-linux
 ##Camera2的源码
 https://android.googlesource.com/platform/packages/apps/Camera2/
 
-
-
 ##GLSurfaceView,SurfaceView,TextureView,Surface对比?
