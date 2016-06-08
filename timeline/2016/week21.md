@@ -126,6 +126,7 @@ tcpdump的实用的例子
 ```
 这里有Spec的下载链接
 ```
+
 ---
 ## 有哪些RTMP Player？
 * [VLC Player]()
@@ -137,22 +138,15 @@ vlc rtmp://<ip>/live/test
     * play rtmp ？
 * [ffmpeg]()
 
-    
-
-
 ---
 ## 与其他的RTMP Server比较
 * Red5
 * [Wowza](https://www.wowza.com/)
 
-
-
 ---
 ##How: How to follow the big-guys?
 ##Communcation with people
 * [nginx-rtmp google groups](https://groups.google.com/forum/#!forum/nginx-rtmp)
-
-
 
 ---
 #遇到的实际问题，
@@ -169,7 +163,6 @@ vlc rtmp://<ip>/live/test
         总结查这个问题的方法，找到每次出现的原因，解决，使同样原因的问题不再重现。
         建立在avplay使用的基础上
 
-
 ## 出现画面静止，vlc cpu 100%， 手机端也停止。
   server出问题？ or OBS出问题？
   
@@ -179,10 +172,7 @@ vlc rtmp://<ip>/live/test
 * nginx-rtmp Delay分析
 * avplay,ffmpeg,vlc Delay分析
 
-
 ## avplay,vlc,这些开源播放器似乎对rtmp的播放支持不太好。
-
-
 
 ##FFmpeg Streaming Guide
 * 可以推到MediaServer，也可以直接推给接收端。
@@ -191,14 +181,11 @@ vlc rtmp://<ip>/live/test
 ffmpeg -y -loglevel warning -f dshow -i video="screen-capture-recorder" -vf crop=690:388:136:0 -r 30 -s 962x388 -threads 2 -vcodec libx264 -vpre baseline -vpre my_ffpreset -f flv rtmp:///live/myStream.sdp
 ```
 
-
-##有哪些提供直播服务的网站了？
-
-###国内的
-* [斗鱼]()
-* [熊猫]()
-* [优酷]()
-
-###国外的
-* [YouTube]()
-* [Twich]()
+##有哪些视频直播行业的门户？
+  * 国内的
+    * [斗鱼]()
+    * [熊猫]()
+    * [优酷]()
+  * 国外的
+    * [YouTube]()
+    * [Twich]()

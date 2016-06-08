@@ -38,15 +38,12 @@ $(VAR_NAME)
 * 看了nginx-rtmp-module的文档
   发现是可以用Flash播放器来测试我搭的nginx服务起的
 
-
 * nginx rtmp jwplayer
 [可能找个Video看一下](https://www.youtube.com/watch?v=GtoTE8oslNA)
 [vultr的Setup Nginx on Ubuntu to Stream Live HLS Video](https://www.vultr.com/docs/setup-nginx-on-ubuntu-to-stream-live-hls-video)
 [wowza的文档](https://www.wowza.com/forums/content.php?484-How-to-use-JW-Player-with-Wowza-Streaming-Engine#rtmp_example)
 
 ##感觉我的目标就是搭一个简单的视频B站...
-
-
 
 ##关于思考项目管理和推进.
 - [ ] [从程序员到项目管理](http://developer.51cto.com/art/201211/364725.htm)
@@ -62,17 +59,12 @@ $(VAR_NAME)
 
 ---
 ##怎么做IT工作纪要?
-
-了解了:
-
-发现了:
-* nginx-rtmp
-
-解决了:
-
-学会了:
-
-看了什么书,Blog...
+  * 了解了:
+  * 发现了:
+    * nginx-rtmp
+  * 解决了:
+  * 学会了:
+  * 看了什么书,Blog...
 
 ###Media System
 [Comparison](https://en.wikipedia.org/wiki/Comparison_of_streaming_media_systems)
@@ -85,14 +77,12 @@ $(VAR_NAME)
 
 ##RTMP协议还需要看AMF0,AMF3等协议,因为OBS上用到了.
 但是AMF0只是定义格式,并未讲具体的功能.
-
+具体的功能定义还是在RTMP的那个协议里,还要参考AS3的API文档才能理解.
 
 ##试用Red5
 [Red5-server](https://github.com/Red5/red5-server)
 [Red5](http://red5.org/) 
 [Wowza](https://www.wowza.com/)
-
-
 
 ##推流端按照什么标准去实现?
   集成SDK?
