@@ -38,13 +38,15 @@ quit和quitsafely怎么调用?
   * 推流端, 嵌入式平台,Android平台
   * 播放端, iOS, Android, Flash
   * 服务器, Ubuntu,CentOS,BSD,Windows?
-  
+
  
 ##ExoPlayer
 * [ExoPlayer](https://github.com/google/ExoPlayer)
 * PlayerActivity
   onShown会调用preparePlayer
 * 状态是preparing, buffering, ready
+* Google自己给的guide是很好的入门材料[Guide](https://google.github.io/ExoPlayer/)
+
 ##VLC-android
 
 编译居然说一些工具需要最新版的gettext
@@ -214,3 +216,63 @@ Streaming Server应用场景
 * 采集
 * Encoder
 * Muxer
+
+##下周该做一些什么?
+目标:
+推流端,android平台,(推Camera流RTMP)
+服务器端,nginx-rtmp-module,
+播放端,ExoPlayer,支持rtmp播放
+
+###怎么实现ExoPlayer的RTMP播放呢?
+找到一个Demo实现[ButterflyTV](https://github.com/ButterflyTV),[这个是它的Blog](http://www.butterflytv.net/en/2016/01/25/play-rtmp-streams-and-seek-flv-files-with-exoplayer-for-developers/)
+
+
+###推流端
+* 新思路,上传为什么一定要rtmp呢??任何方法都可以啊,只要Server端能接收和Remux就好了啊?
+  ```
+  If you are using a web-browser on Android device, you can use WebRTC for video capturing and server-side recording, i.e with Web Call Server 4
+
+  Thus the full path would be:
+
+  Android Chrome [WebRTC] > WCS4 > recording
+
+  So you don't need RTMP protocol here.
+
+  If you are using a standalone RTMP app, you can use any RTMP server for video recording. As i know Wowza supports H.264+Speex recording.
+  ```
+* android上推流相关的实现
+  * [JavaCV](https://github.com/bytedeco/javacv),这个有点太大,从[这里](http://stackoverflow.com/a/29061628)找的
+  * librtmp不知道行不行,rtmpdump工具,从ffmpeg分出来的[Link](http://kodi.wiki/view/HOW-TO:Update_librtmp)
+  * ffmpeg
+  * [libstreaming](https://github.com/fyhertz/libstreaming),这个是RTSP的,用RTP over UDP
+  * 这个回答比较全[Link](http://stackoverflow.com/a/10252369),不过是12年的了,
+  * 可以从Red5去找
+  * [这个人写了个HTTP-FLV的](https://github.com/ossrs/srs-sea),[作者的CSDN](http://blog.csdn.net/win_lin),组织,观止云
+  
+###Vitamio?
+看Log挺多人用的...
+
+
+###折腾Windows系统弄明白点事情
+* 遇到了浏览器(Chrome和Edge)无法下载文件,但IE却可以...
+* 用WireShark发现Chrome对某IP发起Tcp连接却被RST...
+* 用命令查DNS发现这个居然是迅雷的...
+* 猜到是迅雷的关系,下载安装并卸载问题解决...
+* 总结,可能是迅雷的相关服务吧,但为什么呢它能够完全把Chrome的访问拦截掉呢...
+
+* 在Windows里改了下Linux分区的盘符...结果Grub启动就出问题了...幸好会一点点Grub的命令..
+
+
+###librtmp实践了一下
+[RTMPDump](http://rtmpdump.mplayerhq.hu/)
+> ownload the source: 
+git clone git://git.ffmpeg.org/rtmpdump
+
+发现了叫个[rtspdump](http://bisqwit.iki.fi/source/ms-rtsp-dump/)的东西...
+这上面有个Flow图简直吊炸了.
+
+
+###streaming方向太窄的问题
+我是基于之前的经验和现在这个不是特别好的机会来做一下这方面的项目...
+并不确定这个选择正确与否.
+拓展服务器领域??
