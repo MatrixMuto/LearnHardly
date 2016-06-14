@@ -1,3 +1,5 @@
+*Week 23	June 6, 2016	June 12, 2016*
+
 ##这周想要试着架构一下Android推流端
   参照WebRTC?
 ##不小心搜到Google VR SDK
@@ -276,3 +278,37 @@ git clone git://git.ffmpeg.org/rtmpdump
 我是基于之前的经验和现在这个不是特别好的机会来做一下这方面的项目...
 并不确定这个选择正确与否.
 拓展服务器领域??
+
+###技术开放小组??
+[技术开发小组?](http://blog.qiji.tech/)
+  做软件页面外包
+
+
+###大B站的开源栈
+[Bilibili Open Source Task Force](https://github.com/Bilibili)
+[join Bilibili](https://github.com/Bilibili/join-us)
+
+###怎么逐帧分析Flv文件的H.264数据
+[参考这个回答](http://stackoverflow.com/a/27531667)
+```
+./ffprobe -show_frames -select_streams v:0 /tmp/video_recordings/test.flv > /tmp/frames_info
+```
+[官方文档](https://ffmpeg.org/ffprobe.html)
+
+
+###为什么RTMP会有1~2秒的latency?
+从WallClock的角度,不太好对比两端之间的delay,因为系统时间之间就有几百毫秒的差别?
+如果从帧的delay个数角度算验证?
+
+###ucloud的技术分享
+[ucloud](http://blog.ucloud.cn/?p=694)
+
+###ffplay加参数控制buffer,参考[Link](https://trac.ffmpeg.org/wiki/StreamingGuide#Latency)
+>There is also apparently an option -fflags nobuffer which might possibly help, usually for receiving streams ​reduce latency.
+```
+ffplay -probesize 8000 -fflags nobuffer rtmp://172.17.196.3:1935/live/test
+```
+
+>Note:GOP设置1s和8s的区别是client显示第一个画面所需的时间,因为需要关键帧.
+>另外,如果Server端做了Cache前一个关键帧的话,就会影响Latency.
+
