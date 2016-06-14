@@ -54,3 +54,13 @@ gdb需要symbol???
 ###调试代码比只看代码效果要好一点.
 
 ###ijkplayer怎么用上ffmpeg的?
+
+
+###项目构建工具
+* nginx有一套auto脚本,用来生成Makefile
+* ffmpeg有一个configure生成config.h,Makefile会依赖这个来编译
+* webrtc又有一套ninja编译系统
+* ndk用一套Android.mk和Application.mk
+* android studio又用一套gradle来管理项目
+* 我用什么呢...只会手写简单的Makefile~~~
+* 所以IDE的好处``` 
