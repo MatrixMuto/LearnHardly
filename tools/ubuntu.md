@@ -1,4 +1,5 @@
 #About Ubuntu
+*记录Ubuntu系统配置的一些*
 
 >又重装系统了,装了个Ubuntu 16.04,[download](),过程曲折,结局悲催.
 

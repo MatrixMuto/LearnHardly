@@ -1,3 +1,4 @@
+*文件名不对,应该就是git*
 #GitHub Manunal
 > *我的GitHub手册*
 
@@ -15,3 +16,16 @@
 git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 ```
+
+###git clone --reference 
+
+###git repack -a ?
+
+###git fetch --all --tags ?
+
+###git --verison
+
+###git checkout <commit> -B ijkplayer??
+
+
+###当你本地分支有改动(local changes)时,你pull remote时,如果冲突的话,会提示让你commit或者stash.

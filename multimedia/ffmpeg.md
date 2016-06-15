@@ -10,9 +10,13 @@
 下面有各大maillist列表
 
 
-### [介绍FFmpeg的Git基本操作](https://ffmpeg.org/git-howto.html)
+###[介绍FFmpeg的Git基本操作](https://ffmpeg.org/git-howto.html)
 
 
 ###[Fmpeg Wiki](https://trac.ffmpeg.org/)
 
 ###[Complie Guide](https://trac.ffmpeg.org/wiki/CompilationGuide)
+
+###FFmpeg的两个代码仓库
+https://github.com/FFmpeg/FFmpeg
+https://git.videolan.org/git/ffmpeg.git

@@ -54,3 +54,7 @@ gdb需要symbol???
 ###调试代码比只看代码效果要好一点.
 
 ###ijkplayer怎么用上ffmpeg的?
+
+
+###Android Studio Open 一个项目目录的之后,按什么顺序做了哪些事情?
+*因为这个过程太久了,又不能Cancel重来*
