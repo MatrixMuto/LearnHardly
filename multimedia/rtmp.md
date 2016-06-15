@@ -21,10 +21,11 @@ The *client* or the *server* sends this message to inform the peer of the window
 Thre sender **expects acknowledgment** from ite peer after the sender sends window size bytes. 
 
 
-
-
 ##看协议遇到的问题,不知道去哪找FCPublish的Spec.
 原来是AS3的接口.
 
 ##里面的一些概念还是不太清楚.
 照着抓的包看,倒是能看懂一些,也知道要从AS3的东西
+
+###Client时,C0就等与3,C1是1536 octets long.
+

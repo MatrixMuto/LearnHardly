@@ -58,3 +58,21 @@ gdb需要symbol???
 
 ###Android Studio Open 一个项目目录的之后,按什么顺序做了哪些事情?
 *因为这个过程太久了,又不能Cancel重来*
+
+
+###intprt_t,怎么include头文件
+```
+#include <stdint.h>  //简直要命啊
+```
+在*#include <netinet/in.h>*中会 *#include< stdint.h>*
+
+###cc gcc g++有什么区别?
+http://stackoverflow.com/a/1516658
+在Ubuntu 14.04默认配置上,
+cc->/usr/bin/cc->/etc/alternatives/cc->/usr/bin/gcc
+
+
+###-Wimplicit-function-declaration
+
+
+

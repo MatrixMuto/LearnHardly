@@ -78,3 +78,26 @@ ngx_module_t ngx_core_module = {
 }
 ```
 
+###ngx_send
+nginx的io函数调用是通过一些全局结构体来串起来的.
+
+最后是通过宏
+
+event/ngx_event.h
+```c
+#define ngx_send             ngx_io.send
+```
+
+
+linux的话,实际上调用的是os/unix/ngx_send.c里的
+```c
+ssize_t
+ngx_unix_send(ngx_connection_t *c, u_char *buf, size_t size)
+{
+    ...
+}
+```
+
+###ngx_chain_t 
+这是一个 存在单链表,data是**指向ngx_buf_t的指针**
+

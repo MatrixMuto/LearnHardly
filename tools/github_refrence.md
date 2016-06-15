@@ -29,3 +29,8 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 
 ###当你本地分支有改动(local changes)时,你pull remote时,如果冲突的话,会提示让你commit或者stash.
+
+###git checkout 分支的时候,local change会被保留
+
+###git clone完,如何切换远程分支??
+
