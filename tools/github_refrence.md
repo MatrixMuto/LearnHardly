@@ -17,6 +17,7 @@ git config --global http.proxy 'socks5://127.0.0.1:1080'
 git config --global https.proxy 'socks5://127.0.0.1:1080'
 ```
 
+<<<<<<< HEAD
 ###git clone --reference 
 
 ###git repack -a ?
@@ -34,3 +35,11 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 
 ###git clone完,如何切换远程分支??
 
+=======
+
+###how to fix git commit wrong branch
+[answer](http://stackoverflow.com/a/2941598)
+```
+git reset --soft HEAD^
+```
+>>>>>>> 129a1bb969cbaa7fddca0b7b43046d28d581da99

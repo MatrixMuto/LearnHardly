@@ -103,3 +103,10 @@ sudo dpkg-reconfigure ligh
 
 ##Installation FromLinux
 [Installation FromLinux](https://help.ubuntu.com/community/Installation/FromLinux)
+  硬盘分区的概念
+  GPT,MBR,
+  启动系统 Grub2
+* rsync?
+
+
+http://everythinglinux.org/rsync/

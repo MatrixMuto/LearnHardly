@@ -56,6 +56,7 @@ gdb需要symbol???
 ###ijkplayer怎么用上ffmpeg的?
 
 
+<<<<<<< HEAD
 ###Android Studio Open 一个项目目录的之后,按什么顺序做了哪些事情?
 *因为这个过程太久了,又不能Cancel重来*
 
@@ -102,3 +103,13 @@ View的*text*,*resource-id*,怎么用Java代码设置.
 为什么epoll都能link过?
 libc有哪些东西?
 
+=======
+###项目构建工具
+* nginx有一套auto脚本,用来生成Makefile
+* ffmpeg有一个configure生成config.h,Makefile会依赖这个来编译
+* webrtc又有一套ninja编译系统
+* ndk用一套Android.mk和Application.mk
+* android studio又用一套gradle来管理项目
+* 我用什么呢...只会手写简单的Makefile~~~
+* 所以IDE的好处``` 
+>>>>>>> 129a1bb969cbaa7fddca0b7b43046d28d581da99
