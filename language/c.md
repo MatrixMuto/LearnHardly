@@ -1,5 +1,16 @@
 ###那些类型和头文件
 
+###那些C语言们
+http://stackoverflow.com/a/17209532
+
+* K&R C, 1972-1989
+* C89 or ANSI C, 1989-1990
+* C90, 1990-1999
+* C99, 1999-2011
+* C11, 2011-
+
+* GNU C, 默认并没有什么标准, Linux Kernel,
+
 ###<stdint.h>
 ```c
 /* Types for `void *' pointers.  */
@@ -47,3 +58,5 @@ typedef __fsid_t fsid_t;
 
 ###为什么要这么来用这些类型?能解决什么跨平台的问题吗?
 比如ngx_int_t,u_char等.
+
+###size_t

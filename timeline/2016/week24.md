@@ -72,7 +72,33 @@ http://stackoverflow.com/a/1516658
 cc->/usr/bin/cc->/etc/alternatives/cc->/usr/bin/gcc
 
 
-###-Wimplicit-function-declaration
+###-Wimplicit-function-declaration是什么warning?
+[StackOverflow](http://stackoverflow.com/a/9182835)
+意思是,你用了一个没有声明过的函数,gcc会假设这个函数的声明是int func(),
+链接的时候能成功,因为你在别的.c里找到了..
+如果你返回的是是指针类型,但指针类型比int的size大的时候,就会引起问题了.
+
+C99和C11已经定义这中问题应当被当成error,但是gcc的实现还是把它当做warning.(也许是出于兼容行的考虑)
+
+###android lua项目
+挺有意思吧
 
 
+###要不做一个Android手机屏幕直播软件,用上阿里云/腾讯云的直播SDK,理论上斗鱼/熊猫等等应该能支持手游直播了吧?
+* 通过手机,分享*前/后置摄像头+麦克风*,*手机屏幕+麦克风(中放大游戏声音)*,支持你购买的VPS,私密链接.
+
+
+###UIAnimatorview
+View的*text*,*resource-id*,怎么用Java代码设置.
+* resource-id
+> 如果在values/ids.xml里定义的话,uiautomatorviewer是可以看到的
+* text
+> 不知道怎么设置
+* content-desc
+> 从View就有这个方法来设置
+
+###gcc,arm-xxx-gcc,
+默认会Link哪些库?
+为什么epoll都能link过?
+libc有哪些东西?
 
