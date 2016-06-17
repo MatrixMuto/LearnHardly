@@ -1,3 +1,7 @@
+###Book
+[Managing Projects with GNU Make, 3rd Edition
+The Power of GNU make for Building Anything]()
+
 ###Makefile
 * 定义变量
 * 取变量值
@@ -35,3 +39,31 @@ ffmpeg的Makefile的第二行指定了
 ```
 include config.mak
 ```
+
+###Makefile 还能定义函数啊...
+```
+define DOSUBDIR
+$(foreach V,$(SUBDIR_VARS),$(eval $(call RESET,$(V))))
+SUBDIR := $(1)/
+include $(SRC_PATH)/$(1)/Makefile
+-include $(SRC_PATH)/$(1)/$(ARCH)/Makefile
+-include $(SRC_PATH)/$(1)/$(INTRINSICS)/Makefile
+include $(SRC_PATH)/library.mak
+endef
+
+$(foreach D,$(FFLIBS),$(eval $(call DOSUBDIR,lib$(D))))
+```
+
+###赋值
+* **:=**,**=**这两个有什么区别呢?
+* **+=**
+
+###foreach
+
+###wildcard
+
+###vpath
+
+###eval
+
+###include,-include

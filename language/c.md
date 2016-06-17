@@ -60,3 +60,13 @@ typedef __fsid_t fsid_t;
 比如ngx_int_t,u_char等.
 
 ###size_t
+
+
+
+##Compiler
+* gcc
+* arm-linux-androidabi-gcc
+
+###strict-aliasing
+在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
+

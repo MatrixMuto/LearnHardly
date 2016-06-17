@@ -100,6 +100,7 @@ View的*text*,*resource-id*,怎么用Java代码设置.
 默认会Link哪些库?
 为什么epoll都能link过?
 libc有哪些东西?
+[libc.so](http://stackoverflow.com/questions/6969225/libraries-that-are-linked-by-default)
 
 ###项目构建工具
 * nginx有一套auto脚本,用来生成Makefile

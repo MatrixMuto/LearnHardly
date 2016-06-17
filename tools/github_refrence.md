@@ -46,4 +46,14 @@ git reset --soft HEAD^
 git log -p -1
 ```
 * 看那个文件的具体diff,怎么用我熟悉的工具(BeyondCompare)
-* 
+
+#Read Pro Git
+> Book is [here](https://git-scm.com/book/en/v2)
+
+###Git的Submodule能发挥什么作用?
+* 好像是制定了某个仓库的某个版本(分支+commit)
+* 使用手册呢?
+
+
+###What are the differences between SVN and Git?
+[What are the differences between SVN and Git?](https://help.github.com/articles/what-are-the-differences-between-svn-and-git/)

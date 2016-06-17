@@ -152,7 +152,7 @@ vlc rtmp://<ip>/live/test
 
 ---
 #遇到的实际问题，
-## avplay 出现黑屏 Week 21	May 23, 2016	May 29, 2016
+## avplay 出现黑屏
         ```
         avplay rtmp://localhost/live/test
         ```
