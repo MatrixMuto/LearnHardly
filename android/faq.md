@@ -21,3 +21,7 @@
         targetSdkVersion 23
     }
 ```
+
+
+###savedInstanceState
+什么时候,Activiy/Fragment的onCreate回调的savedInstanceState会有东西取?
