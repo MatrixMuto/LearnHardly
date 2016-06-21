@@ -1,3 +1,5 @@
+*Week 24	June 13, 2016	June 19, 2016*
+
 ###Intellij IDEA 怎么当ffmpeg的IDE呢?
   * 代码跳转
   * 编译
