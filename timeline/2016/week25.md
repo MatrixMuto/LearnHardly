@@ -11,9 +11,29 @@
 ###为什么RTMP和H.264之间需要一层FLV?
 猜测:RTMP会分Audio和Video,但只分Chunk大小,不知道H.264/AAC帧的大小,FLV知道?
 
-###Intellij Idea 大型项目受限硬盘,内存,处理器能力限制.
+###Intellij IDEA 大型项目受限硬盘,内存,处理器能力限制.
 
 ###比方说播放器到服务起的带宽不够,肯定要降码率(压缩率,分辨率,帧率),这肯定是服务器和播放端一起来做的这个事情.
 这个Adaptive不是RTMP协议的范畴
 
 ###波动的话,可以通过缓冲来控制,播放端自己可以把这个事情做了.
+
+###Intellij IDEA CTRL+F11 是关于Bookmark的.
+什么作用?
+
+###在grafika的ContinuousCaptureAndroid中
+Camera <- SurfaceTexutre <- mTextureId
+然后在onFrameAvaliable中
+
+通过
+* eglMakeCurrent eglSurface->
+* SurfaceTexture.updateTexImage->
+* glDraw 
+  > 这里会用到Shader,基础的概念是Program和<想不起来了>
+* glSwapBuffer
+
+###
+1.MediaProjection的createVirtualDisplay接口需要Surface.
+2.TextureView中的SurfaceTexture -> Surface是可以的.
+3.说明我的SurfaceTexture不太对.
+
