@@ -2,6 +2,8 @@
 #GitHub Manunal
 > *我的GitHub手册*
 
+###基础阅读内容
+
 ## 常用链接
 * [GitHub Help](https://help.github.com/)
 
@@ -26,7 +28,6 @@ git config --global https.proxy 'socks5://127.0.0.1:1080'
 ###git --verison
 
 ###git checkout <commit> -B ijkplayer??
-
 
 ###当你本地分支有改动(local changes)时,你pull remote时,如果冲突的话,会提示让你commit或者stash.
 
@@ -57,3 +58,13 @@ git log -p -1
 
 ###What are the differences between SVN and Git?
 [What are the differences between SVN and Git?](https://help.github.com/articles/what-are-the-differences-between-svn-and-git/)
+
+###什么是branch的track?
+```
+git branch --set-upstream-to stapler remotes/origin/stapler
+```
+设置了这个以后,git pull, git push 的行为好像就变了..
+
+###怎么关注一个仓库每个分支的提交?有推送吗?是不是GitHub提供的Watch功能?
+
+###怎么查当前版本下,某文件的某行代码是什么时候添加的?
