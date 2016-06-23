@@ -55,4 +55,17 @@ Camera <- SurfaceTexutre <- mTextureId
 2.TextureView中的SurfaceTexture -> Surface是可以的.
 3.说明我的SurfaceTexture不太对.
 
-#relay是什么?
+###relay是什么?
+好像是转播的一个概念?如果是转播的话,nginx-rtmp转播的流程是怎么样的?
+
+###我能把Android的Looper搞清楚吗?
+* 常用的用法
+* 实现的一些细节
+
+###终于想起要关掉Ubutnu的启动动画了
+* 编辑**/etc/default/grub**,去掉**"quiet splash"**参数
+* 调用**sudo update-grub2**来落实更新
+* 卸载plymouth-theme-ubuntu-text??
+[StackOverflow Link](http://askubuntu.com/a/33420)
+
+###我能把android.os.Parcelable这个类搞清楚么?
