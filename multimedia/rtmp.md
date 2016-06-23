@@ -29,3 +29,18 @@ Thre sender **expects acknowledgment** from ite peer after the sender sends wind
 
 ###Client时,C0就等与3,C1是1536 octets long.
 
+###Client(直播)与Server之间的流程
+* 协商哪些属性?
+  * app name
+　＊ key?
+  * swfurl?
+
+###Client(播放)与Server之间的流程
+* 协商哪些属性?
+
+###Server怎么把Client(直播)的Chunk,推给Client(播放)的?
+Server会支持一些功能(转码,转Container,...)
+* 负载均衡?尽量让edge去消化请求?
+* Server需要存app的名字,还要根据Key给Client给转发
+
+###为什么比HLS延迟好?
