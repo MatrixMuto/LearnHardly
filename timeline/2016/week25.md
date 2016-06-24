@@ -69,3 +69,15 @@ Camera <- SurfaceTexutre <- mTextureId
 [StackOverflow Link](http://askubuntu.com/a/33420)
 
 ###我能把android.os.Parcelable这个类搞清楚么?
+
+###exoplayer.TrackRender
+* 这是个抽象,有挺多的子类,可以是Decoder,比如MediaCodecTrackRender,但这是一个实例
+* 在外初始化好之后,通过exoplayer.prepare(TrackRender...),传多个Rendener给exoplayer
+
+###UML2示例
+[Link](http://creately.com/blog/diagrams/class-diagram-relationships/)
+
+###以前看过的可以
+* 加上不会中断的断点
+* 不改代码加Log
+* 条件断点
