@@ -10,3 +10,6 @@
 ###
 在Model图里新建了一个Package,Model里就自动为你创建那个Model了,
 你在View视图里的拖动都会同步改变Model的,所以要小心.
+
+###UML2示例
+[Link](http://creately.com/blog/diagrams/class-diagram-relationships/)
