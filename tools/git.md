@@ -68,3 +68,13 @@ git branch --set-upstream-to stapler remotes/origin/stapler
 ###怎么关注一个仓库每个分支的提交?有推送吗?是不是GitHub提供的Watch功能?
 
 ###怎么查当前版本下,某文件的某行代码是什么时候添加的?
+
+###远程仓库新建了分支(July),本地仓库如何新建,跟踪,切换到这个分支?
+如果有Local Change, 不产生冲突的话, 会自动合并.    
+```
+$ git checkout -b serverfix origin/serverfix
+Branch serverfix set up to track remote branch serverfix from origin.
+Switched to a new branch 'serverfix'
+```
+
+###git stash怎么用...?
