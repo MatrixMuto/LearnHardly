@@ -78,3 +78,35 @@ ngx_module_t ngx_core_module = {
 }
 ```
 
+###ngx_send
+nginx的io函数调用是通过一些全局结构体来串起来的.
+
+最后是通过宏
+
+event/ngx_event.h
+```c
+#define ngx_send             ngx_io.send
+```
+
+
+linux的话,实际上调用的是os/unix/ngx_send.c里的
+```c
+ssize_t
+ngx_unix_send(ngx_connection_t *c, u_char *buf, size_t size)
+{
+    ...
+}
+```
+
+###ngx_chain_t 
+这是一个 存在单链表,data是**指向ngx_buf_t的指针**
+
+###Linux内核,CPU与I/O设备独立工作...
+*文件异步I/O*
+android是否支持异步IO?
+epoll与CPU架构是否相关?
+epoll和poll select的区别?
+
+###Nginx中,
+ngx_events_module负责从conf中读取events的配置,
+ngx_event_core_module会从多种具体的*ngx_<event>_module*选取一个来作为当前进程的event module.
