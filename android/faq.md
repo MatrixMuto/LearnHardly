@@ -11,6 +11,12 @@
 ###API方面的兼容性
 * *@TargetApi(23)*这个注解可以放在成员函数声明之前,
   问题是还可以放在哪些地方,有什么作用?
+  > Indicates that Lint should treat this type as targeting a given API level, no matter what the project target is.
+
+  那Lint的作用又是什么?
+
+  [参考](http://www.360doc.com/content/14/1113/09/11800748_424743381.shtml)
+
 *　Gradle配置里,compileSdkVersion, buildToolsVersion, minSdkVersion, targetSdkVersion,这些都起什么作用?
 ```
    compileSdkVersion 23
