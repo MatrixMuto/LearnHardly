@@ -68,3 +68,7 @@ public interface Renderer {
     void onDrawFrame(GL10 gl);
 }
 ```
+###HEVC H.265 AVC H.264
+* 高效视频编码(High Efficiency Video Coding)
+* H.265旨在在有限带宽下传输更高质量的网络视频，仅需原先的一半带宽即可播放相同质量的视频。?
+* H.265标准也同时支持4K(4096×2160)和8K(8192×4320)超高清视频。
