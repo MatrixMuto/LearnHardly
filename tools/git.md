@@ -82,3 +82,11 @@ Switched to a new branch 'serverfix'
 ###github上怎么删除一个branch
 仓库首页,有个[branches页面](https://github.com/MatrixMuto/LearnHardly/branches),可以点一下鼠标就删除了.
 命令行怎么删除远程仓库的分支呢?
+
+
+###git的分支merge?
+```
+git config branch.july.merge refs/heads/july
+```
+
+
