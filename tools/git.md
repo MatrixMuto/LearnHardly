@@ -3,7 +3,7 @@
 > *我的GitHub手册*
 
 ###基础阅读内容
-
+> Book is [here](https://git-scm.com/book/en/v2)
 ## 常用链接
 * [GitHub Help](https://help.github.com/)
 
@@ -90,3 +90,62 @@ git config branch.july.merge refs/heads/july
 ```
 
 
+##git remote show origin
+```
+$ git remote show origin 
+* remote origin
+  Fetch URL: https://github.com/MatrixMuto/MyTestBeds.git
+  Push  URL: https://github.com/MatrixMuto/MyTestBeds.git
+  HEAD branch: master
+  Remote branches:
+    master  tracked
+    stapler tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+```
+
+
+###Git怎么在新的分支上工作
+用上次的Git创建的Branch上,进行push,结果遇到错误,
+```
+error: failed to push some refs to 'https://github.com/MatrixMuto/LearnHardly.git'
+hint: Updates were rejected because a pushed branch tip is behind its remote
+hint: counterpart. If you did not intend to push that branch, you may want to
+hint: specify branches to push or set the 'push.default' configuration variable
+hint: to 'simple', 'current' or 'upstream' to push only the current branch.
+```
+不明就里的设置了current,
+结果在远程仓库那就创建了个分支..
+
+问题是, 'simple', 'current', 'upstream' 有什么区别?
+
+```
+warning: push.default is unset; its implicit value is changing in
+Git 2.0 from 'matching' to 'simple'. To squelch this message
+and maintain the current behavior after the default changes, use:
+
+  git config --global push.default matching
+
+To squelch this message and adopt the new behavior now, use:
+
+  git config --global push.default simple
+
+When push.default is set to 'matching', git will push local branches
+to the remote branches that already exist with the same name.
+
+In Git 2.0, Git will default to the more conservative 'simple'
+behavior, which only pushes the current branch to the corresponding
+remote branch that 'git pull' uses to update the current branch.
+
+See 'git help config' and search for 'push.default' for further information.
+(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+'current' instead of 'simple' if you sometimes use older versions of Git)
+```
+
+###怎么在仓库里,建立一个别的仓库的submodule?
+```
+git submodule add ./ffmpeg
+```
+好像有效果,应该要是个url地址

@@ -1,18 +1,155 @@
 *[Week 27	July 4, 2016	July 10, 2016](http://www.epochconverter.com/weeks/2016)*
 
-
-###Git怎么在新的分支上工作
-用上次的Git创建的Branch上,进行push,结果遇到错误,
+###ffplay播放下面的链接时,提示协议部支持,需要openssl
+```shell
+ffplay https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
 ```
-error: failed to push some refs to 'https://github.com/MatrixMuto/LearnHardly.git'
-hint: Updates were rejected because a pushed branch tip is behind its remote
-hint: counterpart. If you did not intend to push that branch, you may want to
-hint: specify branches to push or set the 'push.default' configuration variable
-hint: to 'simple', 'current' or 'upstream' to push only the current branch.
+###取名字有纠结症,取水果名~
+[Link](http://english.cri.cn/7046/2010/05/28/102s572871.htm)
+
+###GitHub,仓库内给予Markdown的跳转链接怎么做?
+*做timeline整理的时候可以用上*
+在github上浏览的时候,它对markdown类型的文件,会生成带'#'的章节链接,空格会转成'-',中文不变,'.'去掉,大写转小写
+
+###avformat_network_init干嘛了?
+```c
+/**
+ * Do global initialization of network components. This is optional,
+ * but recommended, since it avoids the overhead of implicitly
+ * doing the setup for each session.
+ *
+ * Calling this function will become mandatory if using network
+ * protocols at some major version bump.
+ */
+int avformat_network_init(void);
+
+/**
+ * Undo the initialization done by avformat_network_init.
+ */
+int avformat_network_deinit(void);
 ```
-不明就里的设置了current,
-结果在远程仓库那就创建了个分支..
 
-问题是, 'simple', 'current', 'upstream' 有什么区别?
+###avformat库的依赖库
+```
+FFMPEG_DIR = ../ffmpeg
 
+DEP  = -lavformat -lavcodec -lavfilter -lavdevice -lavutil
+DEP2 = -lcrypto -lssl -lpthread -lm -lz
+DEP3 = -L$(FFMPEG_DIR)/libswresample -lswresample
 
+all: main.c
+	cc main.c -I$(FFMPEG_DIR) $(DEP) $(DEP2) -o main
+
+```
+最简单的ffmpeg环境Makefile了...
+
+>今天又被自己坑了,gcc命令里链接库'-lxxx'的顺序要注意!
+>用.a和用.so的区别?
+用静态库作依赖库的话,只会链接main函数开始,被用到的函数,减少可执行文件的体积.
+
+###av_register_all
+为什么要执行这个函数?
+执行的话,由于用到了很多可能其实不必要的依赖库,所以要configure的时候,disable掉.
+不执行的话,就要用av_register_input_format和av_register_output_format去注册想要用的format.
+```
+/**
+ * Initialize libavformat and register all the muxers, demuxers and
+ * protocols. If you do not call this function, then you can select
+ * exactly which formats you want to support.
+ *
+ * @see av_register_input_format()
+ * @see av_register_output_format()
+ */
+void av_register_all(void);
+
+void av_register_input_format(AVInputFormat *format);
+void av_register_output_format(AVOutputFormat *format);
+```
+
+###libva.so
+链接了av_register_all后,出现链接错误.
+```
+ffmpeg/libavcodec/vaapi_encode.c:46: undefined reference to `vaCreateBuffer'
+```
+它是[Link](http://01org.github.io/libva_master_doxygen/index.html)的api函数.
+```
+Video Acceleration (VA) API
+Introduction
+
+The main motivation for VA-API (Video Acceleration API) is to enable hardware accelerated video decode and encode at various entry-points (VLD, IDCT, Motion Compensation etc.) for the prevailing coding standards today (MPEG-2, MPEG-4 ASP/H.263, MPEG-4 AVC/H.264, VC-1/VMW3, and JPEG).
+
+VA-API is split into several modules:
+
+Core API
+H.264 encoding API
+Video processing API
+```
+
+###libbz2.so
+```
+ffmpeg/libavformat/matroskadec.c:1395: undefined reference to `BZ2_bzDecompressInit'
+```
+在链接命令里加'-lbz2'
+
+###av_read_frame
+```c
+/**
+ * Return the next frame of a stream.
+ * This function returns what is stored in the file, and does not validate
+ * that what is there are valid frames for the decoder. It will split what is
+ * stored in the file into frames and return one for each call. It will not
+ * omit invalid data between valid frames so as to give the decoder the maximum
+ * information possible for decoding.
+ *
+ * If pkt->buf is NULL, then the packet is valid until the next
+ * av_read_frame() or until avformat_close_input(). Otherwise the packet
+ * is valid indefinitely. In both cases the packet must be freed with
+ * av_packet_unref when it is no longer needed. For video, the packet contains
+ * exactly one frame. For audio, it contains an integer number of frames if each
+ * frame has a known fixed size (e.g. PCM or ADPCM data). If the audio frames
+ * have a variable size (e.g. MPEG audio), then it contains one frame.
+ *
+ * pkt->pts, pkt->dts and pkt->duration are always set to correct
+ * values in AVStream.time_base units (and guessed if the format cannot
+ * provide them). pkt->pts can be AV_NOPTS_VALUE if the video format
+ * has B-frames, so it is better to rely on pkt->dts if you do not
+ * decompress the payload.
+ *
+ * @return 0 if OK, < 0 on error or end of file
+ */
+int av_read_frame(AVFormatContext *s, AVPacket *pkt);
+```
+
+###error: ‘for’ loop initial declarations are only allowed in C99 mode
+```
+main.c:28:2: error: ‘for’ loop initial declarations are only allowed in C99 mode
+  for (int i=0;i<10;i++)
+  ^
+main.c:28:2: note: use option -std=c99 or -std=gnu99 to compile your code
+```
+
+###[hls,applehttp @ 0x27930e0] Invalid timestamps stream=2, pts=921021, dts=924024, size=497
+出这个log的原因是,ffmpeg的代码上有一个dts和pts的判断,如果pts小于dts的话,就会输出这行.
+需要pts和dts的基础来解释这个...
+* pts在多媒体框架中有什么作用?
+* dts
+
+###avformat_open_input对hls协议的open流程是怎么样的?
+以及avformat的角色...
+
+###VSYNC是个啥?
+*在ffmpeg.h里也看到了VSYNC这个玩意,之前是在android的graphics看到.*
+vsync应该是一个硬件上的东西,很可能是display驱动发出来的信号?
+>What Is V-Sync?
+It's short for vertical synchronization, an optional setting on your graphics card that throttles the frames being drawn to match the number of times your monitor refreshes itself every second.
+
+* [Android中的VSYNC](https://source.android.com/devices/graphics/implement.html)
+
+###Codec-specific Data
+[Codec-specific Data](https://developer.android.com/reference/android/media/MediaCodec.html)
+* SPS
+* PPS
+* VPS
+
+###avformat_open_init
+此函数主要通过|init_input|完成功能
