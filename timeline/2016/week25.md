@@ -70,7 +70,7 @@ Camera <- SurfaceTexutre <- mTextureId
 
 ###我能把android.os.Parcelable这个类搞清楚么?
 
-###[ExoPlayer.TrackRender](../../multimedia/exoplayer.md)
+###[ExoPlayer.TrackRender](../../multimedia/exoplayer.md#ExoPlayer.TrackRender)
 
 ###以前看过的,Android Studio的断点的高级技巧
 * 加上不会中断的断点
