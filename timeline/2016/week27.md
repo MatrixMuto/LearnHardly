@@ -153,3 +153,6 @@ It's short for vertical synchronization, an optional setting on your graphics ca
 
 ###avformat_open_init
 此函数主要通过|init_input|完成功能
+
+###ssh终端和串口终端有什么区别?
+因为我用ssh终端,可能无法显示什么东西出来?
