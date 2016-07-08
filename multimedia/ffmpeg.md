@@ -44,3 +44,7 @@ CFLAGS="-O3 -Wall -mthumb -pipe -fpic -fasm \
 -loglevel debug
 -loglevel verbose
 ```
+
+###ffmpeg doxygen
+[ffmpeg doxygen](http://ffmpeg.org/doxygen/trunk/index.html)
+

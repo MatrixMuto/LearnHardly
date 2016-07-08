@@ -244,3 +244,44 @@ val &= ~XXX_FLAG; //清标志位
 
 ###rtp播放端在发现少了少量的rtp包的时候,怎么样控制马赛克?
 分rtp(h.264) rtp(ts)
+
+###android/linux时间相关.
+* 在ExoPlayer里好像是通过HandlerThread的Handler发message来控制时间的.
+  ```java
+  sendEmptyMessageDelay();
+  wait(span_in_MS);
+  ```
+* C代码的话,应该是用|pthread_cond_wait|还是|usleep|?
+* nginx里面呢?
+  ```c
+  //ngx_time.h
+  #define ngx_gettimeofday(tp)  (void) gettimeofday(tp, NULL);
+  #define ngx_msleep(ms)        (void) usleep(ms * 1000)
+  #define ngx_sleep(s)          (void) sleep(s)
+  ```
+
+###内存拷贝
+* android的内存拷贝的带宽大概有多少?
+* 为什么需要避免内存拷贝
+* 720P@30的YUV数据拷贝会耗费内存带宽,对CPU有什么影响
+
+###grafika中,camera和mediacodec结合的例子
+* 用GLSurfaceView,在onSurfaceCreated时, GLSurfaceView内部的EGLContext里, 创建了一个texture,并绑定给|mSurfaceTexture|.
+  有了|SurfaceTexture|之后,就打开|mCamera|,注册|onFrameAvaliable|,设置给它.在Camera更新时,请求GLSurfaceView的requestRender.
+  触发|onDrawFrame|,
+  SurfaceTexture的|updateTexImage|,从里头拿最新的Frame,更新到本地的Context里?
+  |TextureMovieEncoder|里头有新的线程和新的Context,并且使用|VideoEncoderCore|,来做Encode的事情.
+  最后,调用GLES的接口,把SurfaceTexture的内容Render出来.
+* 使用了|SurfaceView|,在|surfaceCreated|回调里, 首先,从这个SurfaceView的Surface,绑定一个|mDisplaySurface|,在这个|EGLSurface|上下文里,
+  创建一个|texture|,并绑定到|mCameraTexture|.
+  设置camera的previewTexture,|startpreview|.
+  TODO:这里又创建了|mEncoderSurface|,是从|MediaCodec|的|createInputSurface|,这里也用了WindowSurface.
+  根本上,都是EGL.createWindowSurface,和createPbuffer.这之间的区别是什么???
+  然后等的就是|onFrameAvailable|,但是它是向UI thread的发的消息,去调用OpenGL的接口.
+* TextureFromCameraActivity
+  |SurfaceView|完全与|RenderHandlerThread|独立开的一种模型.
+
+
+###又遇到android studio卡住,还是网络原因
+出问题的网络原因是因为用了代理,|gradle.properties|文件定义了代理,
+但是为什么testCompile又要用到网络呢,算了,不管.
