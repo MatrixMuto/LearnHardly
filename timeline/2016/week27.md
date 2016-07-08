@@ -154,5 +154,93 @@ It's short for vertical synchronization, an optional setting on your graphics ca
 ###avformat_open_init
 此函数主要通过|init_input|完成功能
 
+
 ###ssh终端和串口终端有什么区别?
 因为我用ssh终端,可能无法显示什么东西出来?
+
+###作为capturer/broadcaster不同的帧率,pts,dts值怎么填?
+
+###网络摄像头功能:图像侦测,声音侦测
+怎么把这个功能实现到摄像头端,服务器端,播放端?
+
+###Segmentation fault (core dumped)
+出现这个之后,效率最高的查法是什么?
+* gdb main
+* 
+
+###ffmpeg推文件到rtmp服务器的live上
+```
+ffmpeg -re -i ~/Videos/test.flv -f flv -rtmp_playpath test -rtmp_app live rtmp://localhost:1935/
+```
+
+###给树莓派装系统
+[Link](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
+基本就几步
+* 下载镜像
+* umount
+  ```
+  umount /dev/sd*x*1
+  ```
+* 写卡
+  ```
+   sudo dd bs=4M if=2016-05-27-raspbian-jessie.img of=/dev/sd*x*
+  ```
+* sync一下
+
+###bitbucket, for team是什么意思?
+[bitbucket](https://bitbucket.org/)
+
+###mercurial
+在下载libx265的仓库的时候,居然用的命令是'hg',还说这是mercurial结构的仓库
+
+###gdb with args
+```
+gdb --args ffmpeg_g -re -i ~/Videos/test.flv -f flv -rtmp_playpath test -rtmp_app live rtmp://localhost:1935/
+```
+[StackOverflow](http://stackoverflow.com/a/6121299)
+
+###我怎么以最好的方式使用FFmpeg里的rtmp库?
+```c
+#define RTMP_PROTOCOL(flavor)                    \
+static const AVClass flavor##_class = {          \
+    .class_name = #flavor,                       \
+    .item_name  = av_default_item_name,          \
+    .option     = rtmp_options,                  \
+    .version    = LIBAVUTIL_VERSION_INT,         \
+};                                               \
+                                                 \
+const URLProtocol ff_##flavor##_protocol = {     \
+    .name           = #flavor,                   \
+    .url_open       = rtmp_open,                 \
+    .url_read       = rtmp_read,                 \
+    .url_read_seek  = rtmp_seek,                 \
+    .url_read_pause = rtmp_pause,                \
+    .url_write      = rtmp_write,                \
+    .url_close      = rtmp_close,                \
+    .priv_data_size = sizeof(RTMPContext),       \
+    .flags          = URL_PROTOCOL_FLAG_NETWORK, \
+    .priv_data_class= &flavor##_class,           \
+};
+
+RTMP_PROTOCOL(rtmp)
+RTMP_PROTOCOL(rtmpe)
+RTMP_PROTOCOL(rtmps)
+RTMP_PROTOCOL(rtmpt)
+RTMP_PROTOCOL(rtmpte)
+RTMP_PROTOCOL(rtmpts)
+```
+|avformat.h|包扩了|avio.h|这个头文件,这里是avio一系列的接口.
+
+
+###'~'是按位取反. '^'是位异或
+```
+val |= XXX_FLAG;  //置标志位
+val &= ~XXX_FLAG; //清标志位
+```
+
+###为什么ffmpeg起了N多线程?
+
+###gdb怎么看线程信息?
+
+###rtp播放端在发现少了少量的rtp包的时候,怎么样控制马赛克?
+分rtp(h.264) rtp(ts)

@@ -13,34 +13,33 @@
 
 ---
 ###netstat
-> netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multi‐cast memberships
+  > netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multi‐cast memberships
 
-* 显示有几个interface
-```
-netstat -i
-```
+  * 显示有几个interface
+  ```
+  netstat -i
+  ```
 
-* 只显示TCP/IP v4 协议簇的.
-```
-netstat --inet --inet6
-```
+  * 只显示TCP/IP v4 协议簇的.
+  ```
+  netstat --inet --inet6
+  ```
 
-* 只显示监听状态的连接
-```
-netstat -l
-```
+  * 只显示监听状态的连接
+  ```
+  netstat -l
+  ```
 
-* 不去解析ip和port
-```
-nestat -n
-```
-> --numeric , -n
-       Show numerical addresses instead of trying to determine symbolic host, port or user names. 
+  * 不去解析ip和port
+  ```
+  nestat -n
+  ```
+  > --numeric , -n
+        Show numerical addresses instead of trying to determine symbolic host, port or user names. 
 
 ###tail
 > tail - output the last part of files
   tail -f
-
 
 ###tree
 * 显示?层结构
@@ -48,6 +47,13 @@ nestat -n
 tree -L 1 <DIR>
 ```
 
-
 ###tcpdump
 [androidtcpdump](http://www.androidtcpdump.com/)
+
+###ldd
+> ldd - print shared library dependencies
+```
+  libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007fb4c7705000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fb4c7500000)
+	/lib64/ld-linux-x86-64.so.2 (0x000055923f642000)
+```

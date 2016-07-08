@@ -1,2 +1,18 @@
 
 ###PS2：使用“sh -x script_name.sh”可以调试Shell脚本。
+
+###'|| exit 1'这个是什么语法
+```
+AND and OR lists are sequences of one or more pipelines separated by the control operators ‘&&’ and ‘||’, respectively. AND and OR lists are executed with left associativity.
+
+An AND list has the form
+
+command1 && command2
+command2 is executed if, and only if, command1 returns an exit status of zero.
+
+An OR list has the form
+
+command1 || command2
+command2 is executed if, and only if, command1 returns a non-zero exit status.
+```
+[Bash Manual](https://www.gnu.org/software/bash/manual/bashref.html)

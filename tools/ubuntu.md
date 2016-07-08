@@ -107,6 +107,4 @@ sudo dpkg-reconfigure ligh
   GPT,MBR,
   启动系统 Grub2
 * rsync?
-
-
 http://everythinglinux.org/rsync/

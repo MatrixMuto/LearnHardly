@@ -37,3 +37,10 @@ CFLAGS="-O3 -Wall -mthumb -pipe -fpic -fasm \
   -DANDROID -DNDEBUG"
 ```
 * 编译时会遇到编译错误,要回过去改选项,甚至改代码.
+
+##查看ffmepg log的一些NOTE
+* 按照级别打开Log?
+```
+-loglevel debug
+-loglevel verbose
+```
