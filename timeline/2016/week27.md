@@ -262,8 +262,11 @@ val &= ~XXX_FLAG; //清标志位
 
 ###内存拷贝
 * android的内存拷贝的带宽大概有多少?
-* 为什么需要避免内存拷贝
+  一般都有  ~1 GB/S
+* 为什么需要避免内存拷贝?
+  
 * 720P@30的YUV数据拷贝会耗费内存带宽,对CPU有什么影响
+  40 MB/S
 
 ###grafika中,camera和mediacodec结合的例子
 * 用GLSurfaceView,在onSurfaceCreated时, GLSurfaceView内部的EGLContext里, 创建了一个texture,并绑定给|mSurfaceTexture|.
@@ -285,3 +288,12 @@ val &= ~XXX_FLAG; //清标志位
 ###又遇到android studio卡住,还是网络原因
 出问题的网络原因是因为用了代理,|gradle.properties|文件定义了代理,
 但是为什么testCompile又要用到网络呢,算了,不管.
+
+###命名规范
+* android layout id ?
+* string name
+
+###什么时候用HandlerThread而不是Thread,为什么?
+
+###面试题网站
+[百面](http://www.100mian.com/)

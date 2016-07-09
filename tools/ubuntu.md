@@ -108,3 +108,8 @@ sudo dpkg-reconfigure ligh
   启动系统 Grub2
 * rsync?
 http://everythinglinux.org/rsync/
+
+###终于找到关闭全半角切换(shift+space)快捷键的地方了
+在Fcitx设置的,|Global Config|那页,勾上|Show Advance Option|,就可以找到了.
+
+
