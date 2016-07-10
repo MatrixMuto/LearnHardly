@@ -149,3 +149,11 @@ See 'git help config' and search for 'push.default' for further information.
 git submodule add ./ffmpeg
 ```
 好像有效果,应该要是个url地址
+
+###git reset --hard HEAD
+
+###怎么把已经跟踪的文件,从仓库删除,但是本地依然存在?
+```
+git rm --cached <path/to/file>
+```
+

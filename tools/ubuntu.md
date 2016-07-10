@@ -113,3 +113,7 @@ http://everythinglinux.org/rsync/
 在Fcitx设置的,|Global Config|那页,勾上|Show Advance Option|,就可以找到了.
 
 
+###uefi..
+[StackOverflow](http://askubuntu.com/questions/369284/install-grub2-on-uefi-gpt-create-boot-partition-and-transfer-clonezilla-image)
+
+[Managing EFI Boot Loaders for Linux](http://www.rodsbooks.com/efi-bootloaders/)

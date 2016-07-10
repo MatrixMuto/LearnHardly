@@ -31,3 +31,11 @@
 
 ###savedInstanceState
 什么时候,Activiy/Fragment的onCreate回调的savedInstanceState会有东西取?
+
+###Activity的一些回调和SurfaceView的回调
+* 顺序
+* 线程
+
+###函数进入的Log应该用什么级别.
+
+###android.os.Handler和java.lang.Thread是通过android.os.Looper建立联系的.

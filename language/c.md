@@ -70,3 +70,74 @@ typedef __fsid_t fsid_t;
 ###strict-aliasing
 在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
 
+###参数列表
+__VA_ARGS__
+
+int __android_log_print(int prio, const char *tag, const char *fmt, ...)
+{
+    va_list ap;
+    char buf[LOG_BUF_SIZE];
+
+    va_start(ap, fmt);
+    vsnprintf(buf, LOG_BUF_SIZE, fmt, ap);
+    va_end(ap);
+
+
+    return __android_log_write(prio, tag, buf);
+}
+
+#include <stdio.h>
+#include <stdarg.h>
+
+
+int
+printf(const char *fmt, ...)
+{
+	int ret;
+	va_list ap;
+
+
+	va_start(ap, fmt);
+	ret = vfprintf(stdout, fmt, ap);
+	va_end(ap);
+	return (ret);
+}
+
+
+ va_start(ap, fmt);
+应该解析fmt，到ap的列表，
+
+
+vsnprintf
+把(...)里实际的变量，根据ap的给事，最中转到输出到buf里
+
+
+#define LOG_TAG "VariableSpeed"
+#define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
+#define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
+#define LOGI(...) __android_log_print(ANDROID_LOG_INFO, LOG_TAG, __VA_ARGS__)
+#define LOGW(...) __android_log_print(ANDROID_LOG_WARN, LOG_TAG, __VA_ARGS__)
+#define LOGE(...) __android_log_print(ANDROID_LOG_ERROR, LOG_TAG, __VA_ARGS__)
+那这个宏又是什么意思。
+
+const char *fmt, ...
+和
+__VA_ARGS__
+是对应的
+
+要想在这个宏里hook，怎么弄
+找了个例子，
+#define myprintf(...) printk("[lch]:File:%s, Line:%d, Function:%s," \  
+     __VA_ARGS__, __FILE__, __LINE__ ,__FUNCTION__); 
+
+这个例子里的宏替换又是个怎么替的。
+
+后面的再研究
+
+随便找了个blog
+http://www.cnblogs.com/alexshi/archive/2012/03/09/2388453.html
+这个宏是编译器内部的原理了。
+从编译器的角度看。
+
+
+va_list
