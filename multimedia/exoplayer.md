@@ -24,3 +24,12 @@ Allocate?
 ###ExoPlayer.TrackRender
 * 这是个抽象,有挺多的子类,可以是Decoder,比如MediaCodecTrackRender,但这是一个实例
 * 在外初始化好之后,通过exoplayer.prepare(TrackRender...)接口,传多个Rendener给exoplayer
+
+###ExoPlayer的设计上,从接口当真正实现,中间还有一层wrapper,为什么?
+作为|interface|不能动, 因为动的话, 所有用ExoPlayer的使用者都得改代码.
+有了impl这个接口, User的代码不动,接口的调用顺序不好动.
+实现和组装可以分开,|ExoPlayerImpl|改自己的结构,只要在|ExoPlayerInternal|作调整就可以了.
+我是这么理解的.
+可能这个是什么设计模式吧.
+
+

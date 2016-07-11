@@ -47,3 +47,4 @@ Dependency is a weaker form of relationship and in code terms indicates that a c
 Dependency is a form of association.
 
 #UML
+###Associtaion, Directed Associtation 和 Aggregation, Composition有什么区别?
