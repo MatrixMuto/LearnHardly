@@ -32,4 +32,5 @@ Allocate?
 我是这么理解的.
 可能这个是什么设计模式吧.
 
-
+###ExtractingLoadable
+ExtractingLoadable这个是让Extractor 从 DataSource 读数据.
