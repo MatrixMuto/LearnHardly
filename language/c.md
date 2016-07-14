@@ -141,3 +141,10 @@ http://www.cnblogs.com/alexshi/archive/2012/03/09/2388453.html
 
 
 va_list
+
+###INT_MAX 和 INT_MIN
+需要非常注意int类型的overflow问题...
+
+###多维数组
+int arr[10][10];
+arr[row_index][col_index];

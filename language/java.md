@@ -75,3 +75,8 @@ class inside_class{
 ###弱引用(WeakReference)
 
 
+
+
+
+
+##AtomicInteger

@@ -37,4 +37,6 @@ EGL, OpenGL ES,
 
 * 一个概念是EGLConfig
 * 类似key-value的性质,
-   
+
+###用了WebRTC里的EglBase14,EGLBase10,EGLBase的封装实现.
+* EglBase.create
