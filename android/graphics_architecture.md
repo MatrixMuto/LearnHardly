@@ -40,3 +40,22 @@ EGL, OpenGL ES,
 
 ###用了WebRTC里的EglBase14,EGLBase10,EGLBase的封装实现.
 * EglBase.create
+
+###为什么把SurfaceView的Surface,用来创建EglSurface之后,Camera就不能用这个Surface了??
+camera 的 *setPreviewDisplay* 接口会出现IOException
+```
+W/System.err: java.io.IOException: setPreviewTexture failed
+W/System.err:     at android.hardware.Camera.setPreviewDisplay(Native Method)
+```
+恐怕得弄请出
+```java
+    eglSurface = EGL14.eglCreateWindowSurface(eglDisplay, eglConfig, surface, surfaceAttribs, 0);
+```
+这行代码的实现了.
+原因可能是..
+* 调用过这个接口之后,是调用了NativeWindow的什么接口..导致Camera就不能使用这个NativeWindow了.
+
+说到底,找Camera的时候,接口都那么不好找,说明它的框架我还不熟啊...
+
+
+###android的egl就是ANativeWindow啊...

@@ -143,7 +143,9 @@ http://www.cnblogs.com/alexshi/archive/2012/03/09/2388453.html
 va_list
 
 ###INT_MAX 和 INT_MIN
-需要非常注意int类型的overflow问题...
+需要非常注意int类型的表示,overflow问题...
+overflow是啥?
+表达式的实际大小,超出了类型能表达的值.
 
 ###多维数组
 int arr[10][10];
