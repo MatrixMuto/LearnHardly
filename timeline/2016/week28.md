@@ -48,4 +48,7 @@
     如何保障直播持续播放流畅不卡顿？
 先看播放端的一些逻辑策略..
   上面的这些问题, 是跟协议高度相关的.
-  
+
+#那些开源协议.
+[License](http://blog.jasonding.top/2015/05/11/Git/%E3%80%90Git%E3%80%91%E8%AE%A4%E8%AF%86%E5%90%84%E7%A7%8D%E5%BC%80%E6%BA%90%E5%8D%8F%E8%AE%AE%E5%8F%8A%E5%85%B6%E5%85%B3%E7%B3%BB/)
+![图片](../../res/license-explain.jpg)
