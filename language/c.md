@@ -11,6 +11,11 @@ http://stackoverflow.com/a/17209532
 
 * GNU C, 默认并没有什么标准, Linux Kernel,
 
+
+###c语言数据结构库
+[回答](http://stackoverflow.com/questions/668501/are-there-any-open-source-c-libraries-with-common-data-structures)
+
+
 ###<stdint.h>
 ```c
 /* Types for `void *' pointers.  */
@@ -70,6 +75,7 @@ typedef __fsid_t fsid_t;
 ###strict-aliasing
 在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
 
+---
 ###参数列表
 __VA_ARGS__
 
@@ -150,3 +156,4 @@ overflow是啥?
 ###多维数组
 int arr[10][10];
 arr[row_index][col_index];
+---
