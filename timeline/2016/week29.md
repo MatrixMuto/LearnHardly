@@ -22,4 +22,3 @@
 
 ##dumpcache
 [dumpcache-服务器领域](http://www.dumpcache.com/wiki/doku.php?id=start)
-  

@@ -566,7 +566,7 @@
 															"left": 510,
 															"top": 80,
 															"width": 1,
-															"height": 1465,
+															"height": 2179,
 															"autoResize": false
 														}
 													],
@@ -582,7 +582,7 @@
 													"left": 456,
 													"top": 40,
 													"width": 107,
-													"height": 1505,
+													"height": 2219,
 													"autoResize": false,
 													"stereotypeDisplay": "label",
 													"showVisibility": true,
@@ -962,7 +962,7 @@
 															"left": 731,
 															"top": 80,
 															"width": 1,
-															"height": 1465,
+															"height": 2179,
 															"autoResize": false
 														}
 													],
@@ -978,7 +978,7 @@
 													"left": 672,
 													"top": 40,
 													"width": 118,
-													"height": 1505,
+													"height": 2219,
 													"autoResize": false,
 													"stereotypeDisplay": "label",
 													"showVisibility": true,
@@ -1792,7 +1792,7 @@
 															"left": 503,
 															"top": 508,
 															"width": 14,
-															"height": 1026,
+															"height": 1740,
 															"autoResize": false
 														}
 													],
@@ -1959,7 +1959,7 @@
 															"left": 503,
 															"top": 508,
 															"width": 14,
-															"height": 1029,
+															"height": 1743,
 															"autoResize": false
 														}
 													],
@@ -3111,6 +3111,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -3128,6 +3129,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -3163,6 +3165,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,
@@ -3180,6 +3183,7 @@
 									"visibility": "public",
 									"isStatic": false,
 									"isLeaf": false,
+									"type": "",
 									"isReadOnly": false,
 									"isOrdered": false,
 									"isUnique": false,

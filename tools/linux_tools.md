@@ -50,6 +50,10 @@ tree -L 1 <DIR>
 ###tcpdump
 [androidtcpdump](http://www.androidtcpdump.com/)
 
+```
+tcpdump -i lo tcp port 1935 -w /tmp/001-unnamed.pcap
+```
+
 ###ldd
 > ldd - print shared library dependencies
 ```

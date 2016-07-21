@@ -18,6 +18,7 @@
 ###FFmpeg的两个代码仓库
 https://github.com/FFmpeg/FFmpeg
 https://git.videolan.org/git/ffmpeg.git
+https://git.ffmpeg.org/ffmpeg.git
 
 ###portring to android/arm 
 [yixia/FFmpeg-Android](https://github.com/yixia/FFmpeg-Android)

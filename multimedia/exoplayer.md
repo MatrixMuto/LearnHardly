@@ -4,7 +4,6 @@
 ###基础阅读项目
 * [Developer guide](http://google.github.io/ExoPlayer/guide.html)
 
-
 画一张新的Uml图.
 
 ###ExoPlayer怎么添加对一个流的播放支持(RTMP)?

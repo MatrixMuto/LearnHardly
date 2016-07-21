@@ -4,3 +4,6 @@
 
 ###协议草稿
 [HTTP Live Streaming](https://tools.ietf.org/html/draft-pantos-http-live-streaming-19)
+
+
+###m3u8文件
