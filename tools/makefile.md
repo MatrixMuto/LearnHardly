@@ -31,7 +31,7 @@ prog.o : prog.$(foo)
 
 
 
-###
+###Makefile include
 指定编译工具和编译命令的事情应该是在configure脚本里制定的
 脚本是通过直接修改Makefile还是Makefile引用的其他子makefile呢?
 ffmpeg的Makefile的第二行指定了

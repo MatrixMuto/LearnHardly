@@ -157,3 +157,11 @@ git submodule add ./ffmpeg
 git rm --cached <path/to/file>
 ```
 
+###删除创建的SubModule
+```
+git submodule uninit <dir> 
+```
+这个命令不太对,可能要试试
+```
+git rm -rf <dir>
+```

@@ -1,9 +1,6 @@
 *[Week 27	July 4, 2016	July 10, 2016](http://www.epochconverter.com/weeks/2016)*
 
-###ffplay播放下面的链接时,提示协议部支持,需要openssl
-```shell
-ffplay https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
-```
+
 ###取名字有纠结症,取水果名~
 [Link](http://english.cri.cn/7046/2010/05/28/102s572871.htm)
 
@@ -269,20 +266,7 @@ val &= ~XXX_FLAG; //清标志位
   40 MB/S
 
 ###grafika中,camera和mediacodec结合的例子
-* 用GLSurfaceView,在onSurfaceCreated时, GLSurfaceView内部的EGLContext里, 创建了一个texture,并绑定给|mSurfaceTexture|.
-  有了|SurfaceTexture|之后,就打开|mCamera|,注册|onFrameAvaliable|,设置给它.在Camera更新时,请求GLSurfaceView的requestRender.
-  触发|onDrawFrame|,
-  SurfaceTexture的|updateTexImage|,从里头拿最新的Frame,更新到本地的Context里?
-  |TextureMovieEncoder|里头有新的线程和新的Context,并且使用|VideoEncoderCore|,来做Encode的事情.
-  最后,调用GLES的接口,把SurfaceTexture的内容Render出来.
-* 使用了|SurfaceView|,在|surfaceCreated|回调里, 首先,从这个SurfaceView的Surface,绑定一个|mDisplaySurface|,在这个|EGLSurface|上下文里,
-  创建一个|texture|,并绑定到|mCameraTexture|.
-  设置camera的previewTexture,|startpreview|.
-  TODO:这里又创建了|mEncoderSurface|,是从|MediaCodec|的|createInputSurface|,这里也用了WindowSurface.
-  根本上,都是EGL.createWindowSurface,和createPbuffer.这之间的区别是什么???
-  然后等的就是|onFrameAvailable|,但是它是向UI thread的发的消息,去调用OpenGL的接口.
-* TextureFromCameraActivity
-  |SurfaceView|完全与|RenderHandlerThread|独立开的一种模型.
+
 
 
 ###又遇到android studio卡住,还是网络原因

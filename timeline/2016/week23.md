@@ -303,12 +303,3 @@ git clone git://git.ffmpeg.org/rtmpdump
 ###ucloud的技术分享
 [ucloud](http://blog.ucloud.cn/?p=694)
 
-###ffplay加参数控制buffer,参考[Link](https://trac.ffmpeg.org/wiki/StreamingGuide#Latency)
->There is also apparently an option -fflags nobuffer which might possibly help, usually for receiving streams ​reduce latency.
-```
-ffplay -probesize 8000 -fflags nobuffer rtmp://172.17.196.3:1935/live/test
-```
-
->Note:GOP设置1s和8s的区别是client显示第一个画面所需的时间,因为需要关键帧.
->另外,如果Server端做了Cache前一个关键帧的话,就会影响Latency.
-
