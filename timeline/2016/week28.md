@@ -11,7 +11,7 @@
   * 内容上至少支持Camera, 其次是Virtual Disaplay.
   * 服务器上支持自己搭的nginx-rtmp, 然后是其他目标吧.
   * ??是不是在Android已经有这样的项目了??
-    * 有人写了Yasea. *其实这上面, 简单做, 真讲不出难点*
+    * 有人写了[Yasea](https://github.com/begeekmyfriend/yasea.git). *其实这上面, 简单做, 真讲不出难点*
    
 * 欠一个PPT,讲流媒体服务的...
   * 重点是能够讲明白,

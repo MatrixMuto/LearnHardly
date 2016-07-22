@@ -44,3 +44,13 @@ Server会支持一些功能(转码,转Container,...)
 * Server需要存app的名字,还要根据Key给Client给转发
 
 ###为什么比HLS延迟好?
+
+###坑,Basic Header中的Chunk Stream ID是什么规则...
+
+
+###releaseStream是不是一定要调用?
+
+###FCPublish是什么作用,是不是一定要调用?
+
+###发了@setDataFrame|onMetaData,居然是因为chunksize太大...
+总结:需要去看Server Log来确定问题..
