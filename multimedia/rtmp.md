@@ -32,7 +32,7 @@ Thre sender **expects acknowledgment** from ite peer after the sender sends wind
 ###Client(直播)与Server之间的流程
 * 协商哪些属性?
   * app name
-　＊ key?
+　* key?
   * swfurl?
 
 ###Client(播放)与Server之间的流程
@@ -54,3 +54,4 @@ Server会支持一些功能(转码,转Container,...)
 
 ###发了@setDataFrame|onMetaData,居然是因为chunksize太大...
 总结:需要去看Server Log来确定问题..
+

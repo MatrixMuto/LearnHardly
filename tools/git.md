@@ -165,3 +165,8 @@ git submodule uninit <dir>
 ```
 git rm -rf <dir>
 ```
+
+###在Windows上使用Git时，Git处理文件的换行符时，可能会采用CRLF的方式。
+* 这样会产生什么问题?
+  * 提交的时候Git会再把CRLF转换回LR吗?
+* 有什么好的方式处理这些问题?
