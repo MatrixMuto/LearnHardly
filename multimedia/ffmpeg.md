@@ -1,3 +1,6 @@
+###FFmpeg文档翻译
+[Link](https://wanglongqi.github.io/tools/2015/02/13/ffmpegcn/)
+
 ##如何进行configure
   1. 为什么没有ffplay?
   
@@ -96,3 +99,4 @@ gdb需要symbol???
 ```shell
 ffplay https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
 ```
+
