@@ -16,3 +16,16 @@ command1 || command2
 command2 is executed if, and only if, command1 returns a non-zero exit status.
 ```
 [Bash Manual](https://www.gnu.org/software/bash/manual/bashref.html)
+
+###部署Nginx&Rtmp的脚本
+```shell
+#Download nginx source code
+#Download nginx-rtmp source code
+
+#Configure & Complile
+
+#install
+
+#Config file nginx
+
+```

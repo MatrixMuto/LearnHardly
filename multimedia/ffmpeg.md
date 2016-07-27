@@ -1,5 +1,14 @@
+<<<<<<< Updated upstream
 ###FFmpeg文档翻译
 [Link](https://wanglongqi.github.io/tools/2015/02/13/ffmpegcn/)
+=======
+#达到什么样的目标.
+因为FFmpeg是个超大的开源软件体..需要花超多的时间来完全掌握.
+如果目标不明确,会浪费很多时间...
+* 熟悉软件应用
+* 熟悉框架
+* 熟悉常用的模块
+>>>>>>> Stashed changes
 
 ##如何进行configure
   1. 为什么没有ffplay?
@@ -99,4 +108,7 @@ gdb需要symbol???
 ```shell
 ffplay https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bipbop_16x9_variant.m3u8
 ```
+
+* 比如我想要把Apple HLS的测试媒体的图像数据DUMP下来?
+  * 我怎么制定HLS Adapative的分辨率呢?
 

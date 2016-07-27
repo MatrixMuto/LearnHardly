@@ -61,3 +61,11 @@ tcpdump -i lo tcp port 1935 -w /tmp/001-unnamed.pcap
 	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007fb4c7500000)
 	/lib64/ld-linux-x86-64.so.2 (0x000055923f642000)
 ```
+
+###lsof
+* 找端口号对应的进程
+  ```
+  ls -i TCP
+  ls -i TCP:1935
+  ```
+  像看nginx进程的话,需要加上sudo
