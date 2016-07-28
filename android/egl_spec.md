@@ -206,6 +206,11 @@ is finished drawing a frame, the native pixmap contains the final image. Pixmap
 surfaces typically do not support multisampling, since the native pixmap used as
 the color buffer is unlikely to provide space to store multisample information.
 
+单buffered渲染是被pixmap surface. color buffer 内存是surface创建时是有native pixmap的
+你的client APIs 是那个内存渲染需要的.
+当client绘制完一帧之后，native pixmap包含一个final图像。
+pixmap surfaces一般不支持multisampling,因为native pixmap用作color buffer时，不会有额外的空间存
+mutlisample的信息
 
 >Some client APIs , such as OpenGL and OpenVG , also support single buffered
 rendering to window surfaces. This behavior can be selected when creating the
@@ -215,5 +220,13 @@ client APIs which do support it, back color buffers and visible window contents
 must be kept consistent when binding window surfaces to contexts for each API
 type (see section 3.7.3).
 
+一些client APIs，像OpenGL和OpengVG，也支持single buffered渲染到window surface。
+这个行为方式，在创建window surface时可以选择，节3.5.1定义了。
+当混合用了client APIs不支持单bufferer渲染到windows的时候，像OpenGL ES就不支持，
+back color缓冲区和可见window内容必须保存consistent，当绑定window surface到context时为每个API类型（见节3.7.3）
+
 >Both back and single buffered surfaces may also be copied to a specified native
 pixmap using eglCopyBuffers.
+
+back和single buffered surface都可以拷贝到指定的native pixmap用*eglCopyBuffers*.
+
