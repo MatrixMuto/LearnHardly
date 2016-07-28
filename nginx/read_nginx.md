@@ -8,7 +8,7 @@
 * [org网上推荐的书](http://nginx.org/en/books.html)
 * [Mastring Nginx](http://product.dangdang.com/23655331.html#catalog) [PDF_LINk](http://pdf.th7.cn/down/files/1411/Mastering%20Nginx.pdf)
 * [Nginx High Perfomance](http://product.dangdang.com/1900482176.html#catalog) [PDF_LINK](http://185.49.84.138/ebooks/Nginx-High-Performance[ebooksfeed.com].pdf)
-
+* [图解nginx 完整流程](http://techlog.cn/article/list/10182665)
 
 ###
 [Nginx源码分析：3张图看懂启动及进程工作原理](http://weibo.com/ttarticle/p/show?id=2309403949643745620312)

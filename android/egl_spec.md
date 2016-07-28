@@ -151,7 +151,7 @@ It is also possible to use a single context to render into multiple EGLSurfaces.
 只要这些兼容约束满足,且地址空间要求满足,clients可以渲染到同一个EGLSurface用不同的contexts.
 也可以用同一个context去渲染不通的EGLSurfaces.
 
-2.2.1 Using Rendering Contexts
+###2.2.1 Using Rendering Contexts
 >OpenGL and OpenGL ES define both client state and server state. Thus an
 OpenGL or OpenGL ES context consists of two parts: one to hold the client state
 and one to hold the server state. OpenVG does not separate client and server state.
@@ -184,7 +184,7 @@ for these client APIs when both are supported (see section 3.7).
 client负责创建context和surface.
 因为OpenGL和OpenGL EScontext共享很多entry points,并且当前context限制存在这些client APIs.
 
-2.2.2 Rendering Models
+###2.2.2 Rendering Models
 >EGL, OpenGL , and OpenGL ES support two rendering models: back buffered
 and single buffered.
 >Back buffered rendering is used by window and pbuffer surfaces. Memory for

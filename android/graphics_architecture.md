@@ -76,3 +76,6 @@ W/System.err:     at android.hardware.Camera.setPreviewDisplay(Native Method)
   然后等的就是|onFrameAvailable|,但是它是向UI thread的发的消息,去调用OpenGL的接口.
 * TextureFromCameraActivity
   |SurfaceView|完全与|RenderHandlerThread|独立开的一种模型.
+
+##makeCurrent和swapBuffer是什么鬼?
+
