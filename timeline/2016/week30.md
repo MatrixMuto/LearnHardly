@@ -39,3 +39,7 @@ Android
 
 ###HLS比较全面的介绍
 [HLS比较全面的介绍](http://yangchao0033.github.io/blog/2016/01/29/hls-1/)
+
+###C10K问题
+[C10K问题](http://www.kegel.com/c10k.html)
+

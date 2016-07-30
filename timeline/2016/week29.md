@@ -22,3 +22,24 @@
 
 ##dumpcache
 [dumpcache-服务器领域](http://www.dumpcache.com/wiki/doku.php?id=start)
+
+###导入Jar包后,编译报错.
+>Error:Execution failed for task ':app:transformResourcesWithMergeJavaResForDebug'.
+> com.android.build.api.transform.TransformException: com.android.builder.packaging.DuplicateFileException: Duplicate files copied in APK META-INF/license.txt
+  	File1: /home/muto/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-core/2.0.0.M3/c7e2c60943248bbce5de6cf552592281ed2296b/spring-android-core-2.0.0.M3.jar
+  	File2: /home/muto/.gradle/caches/modules-2/files-2.1/org.springframework.android/spring-android-rest-template/2.0.0.M3/204c594c2a47073b30d3cb14ca69ba1066c4e44c/spring-android-rest-template-2.0.0.M3.jar
+原因翻译自[StackOverflow](http://stackoverflow.com/a/27989570)    
+  Android Gradle 严格不允许重复文件.
+后来发现文档有写
+```
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/notice.txt'
+    }
+```
+
+
+###新的assert文件怎么加?
