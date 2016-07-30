@@ -25,7 +25,7 @@ class inside_class{
   * 继承会得到基类的所有field和method.
   * 任何类不是继承于其他类就是继承于Obejct
 * 7.6 protected
-  * 就类用户而言,这时privtae的,但对于**此类的导出类**或**其他任何一个位于同一个包内的类**来说,它是可以访问的.
+  * 就类用户而言,这是privtae的,但对于**此类的导出类**或**其他任何一个位于同一个包内的类**来说,它是可以访问的.
   * 
 * 7.7 向上转型(Upcasting)
   * 向上转型是安全的,会丢失方法.
@@ -53,7 +53,7 @@ class inside_class{
       * override?
   * final类
     * 出于设计或安全,final类不能被继承
-    * final类的域可以是final也可以不是finla
+    * final类的域可以是final也可以不是final
     * final类的方法,都是隐式final的
 ###多态(Polymorphism)
   
@@ -73,10 +73,5 @@ class inside_class{
       此时,如果基类没有默认的构造器喊出,编译器就会报错.
 
 ###弱引用(WeakReference)
-
-
-
-
-
 
 ##AtomicInteger

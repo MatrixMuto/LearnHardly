@@ -1,6 +1,3 @@
-
-
-
 ##virtual
 ```cpp
 class IInterface : public virtual RefBase
@@ -10,9 +7,7 @@ class IInterface : public virtual RefBase
   private
   protected
 * 加个virtual,会有什么区别?
-[st](http://stackoverflow.com/a/21607)
+[StackOverflow](http://stackoverflow.com/a/21607)
 多重继承时..
-
-
 
 ##template是个什么干活...
