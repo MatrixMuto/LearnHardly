@@ -1,3 +1,31 @@
+###epoll
+* 相关的manunal
+  ```shell
+  man epoll        #It has Sample Code
+  man epoll_create
+
+  ```
+* epoll_create
+  * 
+* epoll_ctl
+  * EPOLL_CTL_ADD
+* epoll_wait
+
+>Triggering modes
+epoll provides both edge-triggered and level-triggered modes. 
+In edge-triggered mode, a call to epoll_wait will return only when a new event is enqueued with the epoll object, 
+while in level-triggered mode, epoll_wait will return as long as the condition holds.
+For instance, if a pipe, registered with epoll, has received data, a call to epoll_wait will return, 
+signaling the presence of data to be read. Suppose the reader only consumed part of data from the buffer. 
+In level-triggered mode, further calls to epoll_wait will return immediately, 
+as long as the pipe's buffer contains data to be read. 
+In edge-triggered mode, however, epoll_wait will return only once new data is written to the pipe.
+
+level-triggered, 你没把数据读完,下次循环epoll_wait, 会立即返回.
+edge-triggered, 只有新的数据事件, 才会让下次epoll_wait触发.
+
+
+
 ###那些类型和头文件
 
 ###那些C语言们
@@ -35,6 +63,7 @@ typedef unsigned int		uintptr_t;
 ```
 
 ###<netinet/in.h>
+
 ```c
 #include <features.h>
 #include <stdint.h>
@@ -66,8 +95,6 @@ typedef __fsid_t fsid_t;
 
 ###size_t
 
-
-
 ##Compiler
 * gcc
 * arm-linux-androidabi-gcc
@@ -77,6 +104,8 @@ typedef __fsid_t fsid_t;
 
 ---
 ###参数列表
+
+```c
 __VA_ARGS__
 
 int __android_log_print(int prio, const char *tag, const char *fmt, ...)
@@ -94,7 +123,6 @@ int __android_log_print(int prio, const char *tag, const char *fmt, ...)
 
 #include <stdio.h>
 #include <stdarg.h>
-
 
 int
 printf(const char *fmt, ...)
@@ -117,7 +145,9 @@ printf(const char *fmt, ...)
 vsnprintf
 把(...)里实际的变量，根据ap的给事，最中转到输出到buf里
 
+```
 
+```c
 #define LOG_TAG "VariableSpeed"
 #define LOGV(...) __android_log_print(ANDROID_LOG_VERBOSE, LOG_TAG, __VA_ARGS__)
 #define LOGD(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
@@ -156,4 +186,7 @@ overflow是啥?
 ###多维数组
 int arr[10][10];
 arr[row_index][col_index];
----
+
+```
+
+
