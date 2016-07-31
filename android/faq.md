@@ -39,3 +39,8 @@
 ###函数进入的Log应该用什么级别.
 
 ###android.os.Handler和java.lang.Thread是通过android.os.Looper建立联系的.
+
+###Assets
+* src/main/assets
+* 获取assets文件
+  
