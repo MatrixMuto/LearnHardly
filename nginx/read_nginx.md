@@ -8,6 +8,10 @@
 * [org网上推荐的书](http://nginx.org/en/books.html)
 * [Mastring Nginx](http://product.dangdang.com/23655331.html#catalog) [PDF_LINk](http://pdf.th7.cn/down/files/1411/Mastering%20Nginx.pdf)
 * [Nginx High Perfomance](http://product.dangdang.com/1900482176.html#catalog) [PDF_LINK](http://185.49.84.138/ebooks/Nginx-High-Performance[ebooksfeed.com].pdf)
+* [图解nginx 完整流程](http://techlog.cn/article/list/10182665)
+
+###
+[Nginx源码分析：3张图看懂启动及进程工作原理](http://weibo.com/ttarticle/p/show?id=2309403949643745620312)
 
 ###core/nginx.c
 * main
@@ -110,3 +114,45 @@ epoll和poll select的区别?
 ###Nginx中,
 ngx_events_module负责从conf中读取events的配置,
 ngx_event_core_module会从多种具体的*ngx_<event>_module*选取一个来作为当前进程的event module.
+
+##module
+```conf
+rtmp {
+        server {
+            allow play all;
+            listen 1935;
+            chunk_size 4096;
+
+                # application live {
+                #          live on;
+                #          record off;
+                #  }
+            application live{
+                allow play all;
+                live on;
+                record off;
+                record_path /tmp/video_recordings;
+                record_unique on;
+                hls on;
+                hls_nested on;
+                hls_path /tmp/hls/live;
+                hls_fragment 1s;
+            }
+            application vod {
+                play /tmp/video_recordings;
+            }
+            application mobile {
+                allow play all;
+                live on;
+                hls on;
+                hls_nested on;
+                hls_path /tmp/hls/mobile;
+                hls_fragment 10s;
+            }
+        }
+}
+```
+0. nginx最先做的事情是,读取配置文件.
+1. 这里会读到|rtmp|目录项,就会去初始化rtmp的module..
+2. 在收到网络请求"rtmp://<address>:1935/<live>/<app>"时,会走到这个服务这个application..
+3. 

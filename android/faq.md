@@ -11,6 +11,12 @@
 ###API方面的兼容性
 * *@TargetApi(23)*这个注解可以放在成员函数声明之前,
   问题是还可以放在哪些地方,有什么作用?
+  > Indicates that Lint should treat this type as targeting a given API level, no matter what the project target is.
+
+  那Lint的作用又是什么?
+
+  [参考](http://www.360doc.com/content/14/1113/09/11800748_424743381.shtml)
+
 *　Gradle配置里,compileSdkVersion, buildToolsVersion, minSdkVersion, targetSdkVersion,这些都起什么作用?
 ```
    compileSdkVersion 23
@@ -25,3 +31,16 @@
 
 ###savedInstanceState
 什么时候,Activiy/Fragment的onCreate回调的savedInstanceState会有东西取?
+
+###Activity的一些回调和SurfaceView的回调
+* 顺序
+* 线程
+
+###函数进入的Log应该用什么级别.
+
+###android.os.Handler和java.lang.Thread是通过android.os.Looper建立联系的.
+
+###Assets
+* src/main/assets
+* 获取assets文件
+  

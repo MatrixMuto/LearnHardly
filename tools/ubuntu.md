@@ -107,6 +107,13 @@ sudo dpkg-reconfigure ligh
   GPT,MBR,
   启动系统 Grub2
 * rsync?
-
-
 http://everythinglinux.org/rsync/
+
+###终于找到关闭全半角切换(shift+space)快捷键的地方了
+在Fcitx设置的,|Global Config|那页,勾上|Show Advance Option|,就可以找到了.
+
+
+###uefi..
+[StackOverflow](http://askubuntu.com/questions/369284/install-grub2-on-uefi-gpt-create-boot-partition-and-transfer-clonezilla-image)
+
+[Managing EFI Boot Loaders for Linux](http://www.rodsbooks.com/efi-bootloaders/)

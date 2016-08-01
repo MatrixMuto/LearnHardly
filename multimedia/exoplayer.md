@@ -4,7 +4,6 @@
 ###基础阅读项目
 * [Developer guide](http://google.github.io/ExoPlayer/guide.html)
 
-
 画一张新的Uml图.
 
 ###ExoPlayer怎么添加对一个流的播放支持(RTMP)?
@@ -20,3 +19,28 @@
 
 ###Buffer是在哪个类里?
 Allocate?
+
+###ExoPlayer.TrackRender
+* 这是个抽象,有挺多的子类,可以是Decoder,比如MediaCodecTrackRender,但这是一个实例
+* 在外初始化好之后,通过exoplayer.prepare(TrackRender...)接口,传多个Rendener给exoplayer
+
+###ExoPlayer的设计上,从接口当真正实现,中间还有一层wrapper,为什么?
+作为|interface|不能动, 因为动的话, 所有用ExoPlayer的使用者都得改代码.
+有了impl这个接口, User的代码不动,接口的调用顺序不好动.
+实现和组装可以分开,|ExoPlayerImpl|改自己的结构,只要在|ExoPlayerInternal|作调整就可以了.
+我是这么理解的.
+可能这个是什么设计模式吧.
+
+###ExtractingLoadable
+ExtractingLoadable这个是让Extractor 从 DataSource 读数据.
+
+
+##为上面Player的线程模型都是10ms做点事情,10ms做点事情...
+
+
+###prepare
+播放HLS流时,在maybeStratLoading函数里,会调用Loader.startLoading(loadable,this)
+Loader完成Task之后,会回调回来, 然后再调用maybeStartLoading,启动下一次的Load...
+
+###doSomeWork
+先读光codec的output,再填满codec的input...
