@@ -29,3 +29,28 @@ command2 is executed if, and only if, command1 returns a non-zero exit status.
 #Config file nginx
 
 ```
+
+###File attributes compa
+[Link](https://bash.cyberciti.biz/guide/File_attributes_comparisons)
+[unix-linux-test-existence](http://www.cyberciti.biz/faq/unix-linux-test-existence-of-file-in-bash/)
+
+```shell
+test -e filename
+[ -e filename ]
+ 
+test -f filename
+[ -f filename ]
+
+[ -f /etc/hosts ] && echo "Found" || echo "Not found"
+
+#!/bin/bash
+file="/etc/hosts"
+if [ -f "$file" ]
+then
+	echo "$file found."
+else
+	echo "$file not found."
+fi
+
+```
+

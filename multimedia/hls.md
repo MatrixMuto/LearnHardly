@@ -203,3 +203,54 @@ gear1/prog_index.m3u8时，将上一条解析到的信息存到format中，将fo
 ###ExoPlayer中HLS流，动态流选择流程 
 ![ExoPlayer中HLS流，动态流选择流程](http://a4.qpic.cn/psb?/V10YSJGH26Unvn/KV*AXx1jDzM8q.X.RM*OcGSGF3q6mIsTXZzkUjbcJNM!/b/dI8BAAAAAAAA&ek=1&kp=1&pt=0&bo=5ASAAkAGMgMFADY!&su=1109216481&sce=0-12-12&rf=2-9)
 
+##万事不离看HLS[文档](https://tools.ietf.org/html/draft-pantos-http-live-streaming-19)
+                          HTTP Live Streaming
+                  draft-pantos-http-live-streaming-19
+
+Abstract
+
+   This document describes a protocol for transferring unbounded streams
+   of multimedia data.  It specifies the data format of the files and
+   the actions to be taken by the server (sender) and the clients
+   (receivers) of the streams.  It describes version 7 of this protocol.
+
+```
+这里提到了unbounded流,定义了文件格式,服务器(发送者)和客户端(接收者)的行为.
+```
+
+...
+
+#1.  Introduction to HTTP Live Streaming
+
+   HTTP Live Streaming provides a reliable, cost-effective means of
+   delivering continuous and long-form video over the Internet.  It
+   allows a receiver to adapt the bit rate of the media to the current
+   network conditions in order to maintain uninterrupted playback at the
+   best possible quality.  It supports interstitial content boundaries.
+   It provides a flexible framework for media encryption.  It can
+   efficiently offer multiple renditions of the same content, such as
+   audio translations.  It offers compatibility with large-scale HTTP
+   caching infrastructure to support delivery to large audiences.
+
+```
+HLS提供了可靠的,高效的方法,来在互联网中传输连续长的视频.
+它允许接收者根据当前的带宽,调整media的比特率,来获得不卡顿的播放体验,尽量高的图像质量.
+它支持内容间有间隙.它为媒体加密提供了灵活的框架.它可以为同一个内容高效地提供多种翻译,例如音频.
+它与大型HTTP缓存基础设施兼容,来传递内容给大量的观众.
+```
+
+#2.  Overview
+
+   A multimedia presentation is specified by a Uniform Resource
+   Identifier (URI) [RFC3986] to a Playlist.
+
+   A Playlist is either a Media Playlist or a Master Playlist.  Both are
+   UTF-8 text files containing URIs and descriptive tags.
+
+   A Media Playlist contains a list of Media Segments, which when played
+   sequentially will play the multimedia presentation.
+```
+URI, Media Playlist or Master Playlist. UTF-8 text files.
+URIs和descriptive tags.
+Media Segments, 如果顺序播放的话,会展示完整的.
+```

@@ -112,3 +112,35 @@ ffplay https://devimages.apple.com.edgekey.net/streaming/examples/bipbop_16x9/bi
 * 比如我想要把Apple HLS的测试媒体的图像数据DUMP下来?
   * 我怎么制定HLS Adapative的分辨率呢?
 
+###导出yuv数据
+```
+ffmpeg -i /tmp/test%d.Y /tmp/out.mpg
+ffmpeg -i /tmp/test.yuv /tmp/out.avi
+ffmpeg -i mydivx.avi hugefile.yuv
+ffmpeg -i /tmp/a.wav -s 640x480 -i /tmp/a.yuv /tmp/a.mpg
+ffmpeg -i /tmp/a.wav -ar 22050 /tmp/a.mp2
+ffmpeg -i /tmp/a.wav -map 0:a -b:a 64k /tmp/a.mp2 -map 0:a -b:a 128k /tmp/b.mp2
+ffmpeg -i snatch_1.vob -f avi -c:v mpeg4 -b:v 800k -g 300 -bf 2 -c:a libmp3lame -b:a 128k snatch.avi
+ffmpeg -i foo.avi -r 1 -s WxH -f image2 foo-%03d.jpeg
+ffmpeg -f image2 -framerate 12 -i foo-%03d.jpeg -s WxH foo.avi
+ffmpeg -f image2 -pattern_type glob -framerate 12 -i 'foo-*.jpeg' -s WxH foo.avi
+ffmpeg -i test1.avi -i test2.avi -map 1:1 -map 1:0 -map 0:1 -map 0:0 -c copy -y test12.nut
+ffmpeg -i myfile.avi -b 4000k -minrate 4000k -maxrate 4000k -bufsize 1835k out.m2v
+ffmpeg -i src.ext -lmax 21*QP2LAMBDA dst.ext
+```
+
+###导出H.264数据
+```
+命令行：
+
+ffmpeg -i 20130312_133313.mp4 -codec copy -bsf: h264_mp4toannexb -f h264 20130312_133313.264
+
+说明：
+
+ -i 20130312_133313.mp4 :是输入的MP4文件
+
+-codec copy：从MP4封装中进行拷贝
+-bsf: h264_mp4toannexb：从MP4拷贝到annexB封装
+-f h264：采用h.264格式
+20130312_133313.264：输出的文件名称
+```
