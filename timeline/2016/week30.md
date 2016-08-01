@@ -41,8 +41,6 @@ CDN网络Edge服务器缓存层未命中，向Orign服务器发请求的行为�
 ###HLS比较全面的介绍
 [HLS比较全面的介绍](http://yangchao0033.github.io/blog/2016/01/29/hls-1/)
 
-<<<<<<< Updated upstream
-
 ###这段时间，还是聚焦在FFmpeg，以
 * player
 * rtp/rtcp
@@ -59,8 +57,6 @@ CDN网络Edge服务器缓存层未命中，向Orign服务器发请求的行为�
 ###C10K问题
 [C10K问题](http://www.kegel.com/c10k.html)
 
-
-=======
 ###7yuv
 [Linux版本](http://datahammer.de/7yuv_2.5_amd64.tar.gz)
->>>>>>> Stashed changes
+
