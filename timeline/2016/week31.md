@@ -15,10 +15,14 @@
   * ![错误隐藏技术的复杂度和质量关系](http://www.52im.net/data/attachment/forum/201604/23/131129pifaar8aerajae41.jpg)
 
 ###H.264数据组成结构?
+<<<<<<< HEAD
 * NALU分界,[Link](http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/)
   * packet-trasport system, like RTP
   * Byte-stream system, 00000001 or 000001
 * 
+=======
+
+>>>>>>> 48e7f3209208ab7363fffd6df6ea635dd46b17e4
 ###什么是NIO? [Netty3](http://netty.io/),Netty4,[MINA2](http://camel.apache.org/mina2.html)?
 * [IBM教程](http://www.ibm.com/developerworks/cn/education/java/j-nio/index.html)
 * JDK 1.4 引入的 NIO, 高速,面向块.
