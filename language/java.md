@@ -75,3 +75,26 @@ class inside_class{
 ###弱引用(WeakReference)
 
 ##AtomicInteger
+
+
+###模糊的概念
+* @Override, 重载, 重写的区别?
+
+* 静态内部类和内部类的区别?
+
+###select和poll的区别
+[the answer](https://daniel.haxx.se/docs/poll-vs-select.html)
+libevent,libev
+* 功能上
+  * 提供的基本功能基本上一样
+  * 不同点
+    * 传入的文件描述符数组,select会破坏,poll不会
+    * 
+    * 
+    * timeout不一样,poll用的是毫秒值,select用的是timeval结构体指针,提供微秒级,一般不会有实质性不同.
+* 速度上
+
+* 可移植性
+  * seclect比poll稍微好一些.
+* 复杂性
+  * 用事件模型编程都会让程序变得复杂.

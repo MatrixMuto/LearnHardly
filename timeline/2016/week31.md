@@ -16,7 +16,7 @@
 
 ###H.264数据组成结构?
 
-* NALU分界,[Link](http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/)
+* NAL unit分界,[Link](http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/)
   * packet-trasport system, like RTP
   * Byte-stream system, 00000001 or 000001
 * 
