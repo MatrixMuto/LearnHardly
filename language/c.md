@@ -101,6 +101,13 @@ typedef __fsid_t fsid_t;
 
 ###strict-aliasing
 在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
+[中文](http://blog.kongfy.com/2015/09/strict-aliasing%EF%BC%8C%E7%A5%9E%E5%9D%91%EF%BC%9F/)
+[英文](http://dbp-consulting.com/tutorials/StrictAliasing.html)
+这是一个优化选项.
+告诉编译器,我们严格遵守strict-aliasing规则.
+你优化吧.
+
+不同类型的别名,不会指向同一个内存区域.
 
 ---
 ###参数列表
