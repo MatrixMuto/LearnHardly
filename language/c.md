@@ -109,6 +109,36 @@ typedef __fsid_t fsid_t;
 
 不同类型的别名,不会指向同一个内存区域.
 
+
+###semaphore 信号量
+* 在native-codec的例子里, 有个一个消息队列是用线程和信号量一起实现的, 用到的数据结构是单链表.
+* semaphore的api有如下
+  * sem_t
+    类型
+  * sem_init
+  ```c
+       #include <semaphore.h>
+
+       int sem_init(sem_t *sem, int pshared, unsigned int value)
+  ```
+  * sem_post
+  * sem_wait
+  ```c
+    int sem_wait(sem_t *sem);
+
+    int sem_trywait(sem_t *sem);
+
+    int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);
+  ```
+  * sem_destroy
+* 消息队列用信号量的原因, 生产者-消费者模型.
+* 那跟pthread_mutex, pthread_condition有说明区别? 这是个可以很深入的问题.
+>semaphores have a synchronized counter and mutex's are just binary (true / false).
+
+>A semaphore is often used as a definitive mechanism for answering how many elements of a resource are in use -- e.g., an object that represents n worker threads might use a semaphore to count how many worker threads are available.
+
+>Truth is you can represent a semaphore by an INT that is synchronized by a mutex
+
 ---
 ###参数列表
 
