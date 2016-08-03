@@ -1,3 +1,5 @@
+*2016.8.1 - 2016.8.7*
+
 ###Linux下面,怎么方便的分析二进制数据?
 
 ###音频的丢包补偿技术,[Link](http://www.52im.net/thread-251-1-1.html)
@@ -19,8 +21,13 @@
 * NAL unit分界,[Link](http://yumichan.net/video-processing/video-compression/introduction-to-h264-nal-unit/)
   * packet-trasport system, like RTP
   * Byte-stream system, 00000001 or 000001
-* 
+* Slice
+* Macro block
+* access unit
+
 
 ###什么是NIO? [Netty3](http://netty.io/),Netty4,[MINA2](http://camel.apache.org/mina2.html)?
 * [IBM教程](http://www.ibm.com/developerworks/cn/education/java/j-nio/index.html)
 * JDK 1.4 引入的 NIO, 高速,面向块.
+
+###TCP对于视频延迟有什么样的影响?

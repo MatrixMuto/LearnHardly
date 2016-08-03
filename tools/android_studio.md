@@ -24,3 +24,6 @@
 ```
 Error:Cause: com/android/build/gradle/internal/model/DefaultAndroidProject : Unsupported major.minor version 52.0
 ```
+
+###当你以cmake的方式用NDK时,你需要
+* Android Studio 2.2, 可能需要最新的NDK
