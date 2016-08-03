@@ -175,3 +175,11 @@ git rm -rf <dir>
 ```shell
 git clean -f -d -x
 ```
+
+###缓存密码
+[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
+默认时间15分钟.
+```shell
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+```
