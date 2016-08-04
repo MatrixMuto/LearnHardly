@@ -36,3 +36,11 @@ android studio会帮你设置一个,但是它选的gradle版本号,你本地并�
 
 但是如果你留着这个gradle wrapper, 其他机器上导入这工程的时候, 又会遇到重新下载这个gradle的尴尬..
 
+###Android Stduio使用的其他目录
+* Windows
+  * *C:\User\<UserName>\.android* android virtual device的目录
+  * .AndroidStudioPreview2.2 配置目录
+  * .gradle gradle相关的目录
+* Linux
+  
+
