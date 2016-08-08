@@ -23,7 +23,7 @@
 ###[介绍FFmpeg的Git基本操作](https://ffmpeg.org/git-howto.html)
 
 
-###[Fmpeg Wiki](https://trac.ffmpeg.org/)
+###[FFmpeg Wiki](https://trac.ffmpeg.org/)
 
 ###[Complie Guide](https://trac.ffmpeg.org/wiki/CompilationGuide)
 
@@ -49,15 +49,15 @@ CFLAGS="-O3 -Wall -mthumb -pipe -fpic -fasm \
 ```
 * 编译时会遇到编译错误,要回过去改选项,甚至改代码.
 
-##查看ffmepg log的一些NOTE
+##查看FFmepg log的一些NOTE
 * 按照级别打开Log?
 ```
 -loglevel debug
 -loglevel verbose
 ```
 
-###ffmpeg doxygen
-[ffmpeg doxygen](http://ffmpeg.org/doxygen/trunk/index.html)
+###FFmpeg doxygen
+[FFmpeg doxygen](http://ffmpeg.org/doxygen/trunk/index.html)
 
 ###ffplay加参数控制buffer,参考[Link](https://trac.ffmpeg.org/wiki/StreamingGuide#Latency)
 >There is also apparently an option -fflags nobuffer which might possibly help, usually for receiving streams ​reduce latency.
@@ -310,3 +310,29 @@ done
 
 基本是这样.
 
+###打开RTMP流之后,video codec的extradata究竟是啥样的,AVPacket.data也究竟是什么格式的?
+
+* av_read_frame, 从internal读 或 
+  * 相关数据结构 AVPacketList
+    
+怎么有这么多关于pts,dts的处理代码...
+
+internal有
+rawpakcetbuffer
+paketbuffer
+
+FFmpeg本身有一些例子:
+https://www.ffmpeg.org/doxygen/2.7/structAVPacket.html
+https://www.ffmpeg.org/doxygen/2.7/demuxing_decoding_8c-example.html#_a25
+https://www.ffmpeg.org/doxygen/2.7/filtering_video_8c-example.html#_a73
+https://www.ffmpeg.org/doxygen/2.7/remuxing_8c-example.html#_a3
+
+###AVPacket中的data
+用FFmpeg调试rtmp流时遇到问题
+* 直接将{data,size}送给decode, 不行..
+  * 1.我不知道data是啥数据就瞎送...
+  * 2.我不知道decoder接受哪几种数据..
+* 看网上讲,data是4字节的长度+NALu,另外还要从extradata中拿sps和pps,
+* 但我依旧不知道data的数据结构...
+* 最终是通过直接看data数据的hex流,**发(xia)现(cai)**出,一个AVPacket,有可能是多个NAL unit
+* 从代码上, 我依旧不知道,AVPacket的生产,经历了几个流程. {TODO}

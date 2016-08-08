@@ -33,8 +33,9 @@
 ###TCP对于视频延迟有什么样的影响?
 
 ###shell有调试工具吗?
+可以加上bash -x, 打印log? 
 
-
+###引用FFmpeg头文件注意
 >NOTE:在cpp代码中,
 ```
 #include "libavformat/avformat.h"
