@@ -98,3 +98,25 @@ libevent,libev
   * seclect比poll稍微好一些.
 * 复杂性
   * 用事件模型编程都会让程序变得复杂.
+
+###内部类
+* 一般情况下,外部类会有一个函数返回内部类对象的引用.
+
+* >If you want to make an object of the inner class anywhere except from within a non-static
+  method of the outer class, you must specify the type of that object as
+  OuterClassName.InnerClassName 
+  除了在外部类的非静态方法里,其他地方,你想要创建一个内部类的对象,你必须以OuterClassName.InnerClassName的方式.
+
+* 内部类会有一个外部类对象的引用.
+
+* >It’s not possible to create an object of the inner class unless you already have an object of the
+  outer class.
+  除非你有一个外部类的对象,否则你不可能创建一个内部类的对象.
+* 嵌套类
+  当然,你如果加了一个static就另当别论了.
+
+
+* 内部类可以被overridden吗?
+  可能并没有这个概念,内部都是有独立名称空间的类
+* 局部内部类(Local inner class)
+  
