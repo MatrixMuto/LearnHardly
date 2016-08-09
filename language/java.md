@@ -13,7 +13,7 @@ class inside_class{
 
 }
 ```
-每个inside_class的实例都会有一个outside的指针??
+每个inside_class的实例都会有一个outside的引用??
 
 ###为什么在|extends HandlerThread|的时候,我必须实现一个构造函数?
 >在grafika的例子里,是通过继承|Thread|+|Looper|来实现的.
@@ -119,4 +119,25 @@ libevent,libev
 * 内部类可以被overridden吗?
   可能并没有这个概念,内部都是有独立名称空间的类
 * 局部内部类(Local inner class)
-  
+
+##Everything is Object
+* Java是一个更纯粹的面向对象语言.
+* 每种语言都有它自己的操作内存中元素的方法,Java的概念是引用.它跟C++的引用有一些重要的区别.
+* 有5个存数据的地方,寄存器(Registers),栈(stack),堆(heap),常量(constant),非内存(Non-RAM)
+* primitive and its wrapper class
+* BigInteger and BigDecimal
+* Java数组有边界检查,是引用的数组,初始值是null.
+* 任何时候都不用destroy一个对象
+* 大括号,作用域,生命周期.
+* 和C/C++不用的一点,C/C++会隐藏名字一样的变量,Java会报编译错误.
+  ```java
+  { int x=12; {int x=12;//Illegal}}
+  ```
+* Java对象的生命周期和原型变量不同. 作用域外,对象的生命周期还在,只是无法访问了.?是在垃圾回收的时候才结束吗?
+* 垃圾回收,避免一类问题,内存泄露.
+* 类里有两类元素,field(data members), method(memmber functions)
+* filed可以是原型变量或对象引用
+* 原型变量会被Java初始化,只有当这个变量是成员变量的时候. 当它是局部变量的时候,如果你没有初始化,Java编译器会报错.
+* 方法只能作为类的成员存在. 方法只能通过对象调用(静态方法通过类调用)
+
+
