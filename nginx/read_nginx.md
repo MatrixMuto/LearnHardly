@@ -112,8 +112,8 @@ epoll与CPU架构是否相关?
 epoll和poll select的区别?
 
 ###Nginx中,
-ngx_events_module负责从conf中读取events的配置,
-ngx_event_core_module会从多种具体的*ngx_<event>_module*选取一个来作为当前进程的event module.
+*ngx_events_module*负责从conf中读取events的配置,
+*ngx_event_core_module*会从多种具体的*ngx_<event>_module*选取一个来作为当前进程的event module.
 
 ##module
 ```conf
