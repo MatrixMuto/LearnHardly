@@ -148,4 +148,27 @@ libevent,libev
 * 原型变量会被Java初始化,只有当这个变量是成员变量的时候. 当它是局部变量的时候,如果你没有初始化,Java编译器会报错.
 * 方法只能作为类的成员存在. 方法只能通过对象调用(静态方法通过类调用)
 
-
+##Type Information
+Runtime type Information(RTTI), 可以在程序运行时发现使用类型信息.
+* 为什么需要RTTI?
+  * 多态需要动态绑定,实现动态绑定的机制,就是RTTI.
+* Class对象
+  * Class object拥有class的信息
+  * 每个类都有一个Class对象,编译时创建存储在*.class*文件中.
+  * JVM用*class loader*来创建对象
+  * 所有类都是在需要时才被load的,发生在类的静态成员(也包括构造函数)被引用的时候.
+  * 动态加载使得Java做一些复杂的事情.
+  ```java
+  Class.forName()
+  getClass()
+  isInterface()
+  Class.getInterfaces()
+  getSuperclass()
+  
+  ```
+  *
+* 反射(Reflection)
+ * jee
+* 总结
+  
+  
