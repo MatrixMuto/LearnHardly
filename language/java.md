@@ -125,7 +125,8 @@ libevent,libev
 
 
 * 内部类可以被overridden吗?
-  可能并没有这个概念,内部都是有独立名称空间的类
+  可能并没有这个概念,内部都是有独立名称空间的类.
+  可以在类中明确继承那个内部类.
 * 局部内部类(Local inner class)
 
 ##Everything is Object
@@ -171,4 +172,10 @@ Runtime type Information(RTTI), 可以在程序运行时发现使用类型信息
  * jee
 * 总结
   
-  
+##设计模式(Design Patterns)
+
+###Step Builder Pattern
+Builder模式的一种扩张.
+把复杂对象的构建,分成有次序的步奏,引导用户,直到恰到的时候才可以build.
+
+###Builder
