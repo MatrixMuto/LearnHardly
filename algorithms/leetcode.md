@@ -17,3 +17,12 @@
   * n = INT_MIN
 
 
+##34. Search for a Range
+https://leetcode.com/problems/search-for-a-range/
+[TODO: 这个解法才是O(logn)](https://discuss.leetcode.com/topic/5891/clean-iterative-solution-with-two-binary-searches-with-explanation)
+
+##77. Combinations
+>Given two integers n and k, return all possible combinations of k numbers out of 1 ... n.
+递归的方法. 88ms
+* 是不是用DP写会快??
+* 非递归写法会快?
