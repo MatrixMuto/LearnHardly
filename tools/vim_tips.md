@@ -58,6 +58,30 @@ ref:
   42gg
   :42<CR>
   ```
-  
-* 公司/家里/其他电脑上,同步vim的配置
-  通过GitHub来自定义吧.
+
+### Configure my vim.. 
+* 公司/家里/其他电脑上,同步vim的配置,通过GitHub来自定义吧.
+* 完全没有配置的时候,从GitHub上克隆一个,安装.
+  ```shell
+  git clone https://github.com/MatrixMuto/vim_config.git
+  sh vim_config/install.sh
+  ```
+* 之后就一可以通过Git命令进行同步了.
+* 基本都是照[这个amix/vimrc](https://github.com/amix/vimrc/)开源项目配置的.
+* 项目中管理插件的理解
+  1. 首先,会在`.vimrc`配置文件中加上一行`set runtimepath+=~/.vim_runtime`,使得vim会自动加载这个目录下的插件.
+  2. `~/.vim_runtime`下面,一定有一个`autoload`目录,这是vim的解析规则.
+  3. 用`pathogen`插件来管理其他插件.
+  4. `.vimrc`文件里可以通过`source xxx.vim`来包含其他部分的内容,这属于`vim`配置的语法.
+  5. 
+
+### Vim怎么执行shell命令?
+* 可以`Ctrl+Z`切到Shell中敲.
+
+### VIMRUNTIME是什么??
+
+### `~/.vim`目录干嘛的?
+
+### vim有几个插件管理工具.
+* [egalpin/apt-vim](https://github.com/egalpin/apt-vim)
+* [tpope/vim-pathogen](https://github.com/tpope/vim-pathogen)

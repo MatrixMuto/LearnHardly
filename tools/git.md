@@ -192,10 +192,12 @@ git config --global credential.helper 'cache --timeout=3600'
 git init
 git add .
 git commit -m "init"
-git remote add origin <remote> <repository URL>
+git remote add origin <remote repository URL>
 # Sets the new remote
 git remote -v
 # Verifies the new remote URL
 git push origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
+
+##`git pull --rebase`什么作用?
