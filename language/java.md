@@ -17,7 +17,7 @@
 * Override：有人翻译是重写，有人翻译是覆写，覆盖等。
   其实更像是一种扩展，因为它是在父类中声明方法（一般是抽象的），在子类中根据需求去具体定义方法的行为（即modify behavior as needed）
   它要求override的方法有相同的名字、相同的参数、相同的返回值类型（即the same name, number and type of parameters, and return type）。它是一种晚绑定，是决定java多态的一种方式。
-* Overload: 重载, 同一个类,同一个名字, 通过方法签名来区分, 编译时决定.
+* Overload: 重载, 同一个类,同一个名字, 通过方法签名(参数列表)来区分, 编译时决定.(返回值,抛出的异常不能用来区分)
 * [参考一](https://users.soe.ucsc.edu/~charlie/book/notes/chap7/sld012.htm)
   [参考二](http://www.programcreek.com/2009/02/overriding-and-overloading-in-java-with-examples/)
 
@@ -151,7 +151,15 @@ Runtime type Information(RTTI), 可以在程序运行时发现使用类型信息
 * 反射(Reflection)
  * jee
 * 总结
- 
+
+## 注解
+* 注解的作用
+  * 给代码(类)添加格外的信息(MetaData)
+* 注解处理器
+  * 注解写在那,没有去解析,读取的话,那其实就是注释~
+  * 多数的Java框架都会用到注解
+* 使用apt工具处理注解
+
 # 设计模式(Design Patterns)
 
 ### Step Builder Pattern
