@@ -10,4 +10,4 @@ class IInterface : public virtual RefBase
 [StackOverflow](http://stackoverflow.com/a/21607)
 多重继承时..
 
-##template是个什么干活...
+##template是模板概念的一个标识符.

@@ -24,7 +24,22 @@ In edge-triggered mode, however, epoll_wait will return only once new data is wr
 level-triggered, 你没把数据读完,下次循环epoll_wait, 会立即返回.
 edge-triggered, 只有新的数据事件, 才会让下次epoll_wait触发.
 
+### select和poll的区别
+[the answer](https://daniel.haxx.se/docs/poll-vs-select.html)
+libevent,libev
+* 功能上
+  * 提供的基本功能基本上一样
+  * 不同点
+    * 传入的文件描述符数组,select会破坏,poll不会
+    * 
+    * 
+    * timeout不一样,poll用的是毫秒值,select用的是timeval结构体指针,提供微秒级,一般不会有实质性不同.
+* 速度上
 
+* 可移植性
+  * seclect比poll稍微好一些.
+* 复杂性
+  * 用事件模型编程都会让程序变得复杂.
 
 ###那些类型和头文件
 

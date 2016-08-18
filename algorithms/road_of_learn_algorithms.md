@@ -2,12 +2,6 @@
 [一位Google程序员的算法学习之路](http://mp.weixin.qq.com/s?__biz=MzAxNDI5NzEzNg==&mid=402273196&idx=1&sn=ef5ec5392a2f3e22d511f51c49772a4f&scene=5&srcid=0601ne1JzGS7EcK77VDp2YaU#rd)
 * 里面提到的这些书
   * <<The Algorithm Design Manual>> Steven S. Skiena
-    * [这本书的官网](http://www.algorist.com/)
-    * [从官网找来的课程视频](https://echocontent.sinc.stonybrook.edu/ess/portal/section/8238115b-bb60-46ca-a213-ca979f47d0c7)
-    * [Video Lectrue](http://www3.cs.stonybrook.edu/~algorith/video-lectures/)
-    * [Video YouTube](https://www.youtube.com/playlist?list=PLOtl7M3yp-DV69F32zdK7YJcNXpTunF2b)
-    * [书 分章节](http://galaxy.lamar.edu/~sandrei/acm/TextBooks/AlgorithmDesignManual/) 
-    * [书 整本(http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.4772&rep=rep1&type=pdf)
   * <<算法设计与分析>>
 
 ###stanford
