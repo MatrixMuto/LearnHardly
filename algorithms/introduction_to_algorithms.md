@@ -35,3 +35,14 @@ void insertion-sort(void *A)
 }
 ```
 * 循环常量(Loop invariant)
+
+
+##看公开课
+* 算法导论第一课
+  * 均匀分布, 概率论, 平均复杂度(需要假设输入的分布)
+  * 渐进分析, 考虑算法的增长, 
+    忽略低阶,忽略常量,用[mathjax](\theta)表示
+  * 算术级别
+  * 线性时间, Linear time.
+  * 递归树 技术 T(n) = 2T(n/2) + cn
+  

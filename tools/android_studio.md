@@ -43,4 +43,5 @@ android studio会帮你设置一个,但是它选的gradle版本号,你本地并�
   * .gradle gradle相关的目录
 * Linux
   
-
+###gradle wrapper
+[参考](http://stackoverflow.com/questions/22896569/how-to-use-gradle-zip-in-local-system-without-downloading-when-using-gradle-wrap)
