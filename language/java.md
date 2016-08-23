@@ -1,6 +1,6 @@
 ## 资源
-- [Thinking in Java](http://sd.blackball.lv/library/Thinking_in_Java_4th_edition.pdf)
-
+- Pdf: [Thinking in Java, 4th ed.](http://sd.blackball.lv/library/Thinking_in_Java_4th_edition.pdf)
+- Online Web: [Thinking in Java, 3rd ed.](http://www.linuxtopia.org/online_books/programming_books/thinking_in_java/index.html)
 ---
 # FAQ
 
@@ -159,6 +159,11 @@ Runtime type Information(RTTI), 可以在程序运行时发现使用类型信息
   * 注解写在那,没有去解析,读取的话,那其实就是注释~
   * 多数的Java框架都会用到注解
 * 使用apt工具处理注解
+
+## 11. 容器
+![Simple Container Taxonomy](http://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ326.png)
+## 17. 深入容器
+![Full Container Taxonomy](http://www.linuxtopia.org/online_books/programming_books/thinking_in_java/TIJ325.png)
 
 # 设计模式(Design Patterns)
 
