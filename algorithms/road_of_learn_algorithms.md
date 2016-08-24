@@ -11,10 +11,12 @@
 ###MIT公开课
 [所有课程](http://ocw.mit.edu/courses/)
 [6.851 Advanced Data Structures](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-851-advanced-data-structures-spring-2012/#)
-[6.854J/18.415J Advanced Algorithms](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
-[6.046J/18.410J Design and Analysis of Algorithms 2015](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
 [6.046J/18.410J Design and Analysis of Algorithms 2012](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2012/)
-[6.006 Introduction to Algorithms](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/)
+
+###MIT算法课程序列
+1. [6.006 Introduction to Algorithms Fall 2011](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-006-introduction-to-algorithms-fall-2011/)
+2. [6.046J/18.410J Design and Analysis of Algorithms 2015](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-046j-design-and-analysis-of-algorithms-spring-2015/index.htm)
+3. [6.854J/18.415J Advanced Algorithms 2008](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-854j-advanced-algorithms-fall-2008/)
 
 ###MIT Mathematics
 [Mathematics](http://ocw.mit.edu/courses/mathematics/)
