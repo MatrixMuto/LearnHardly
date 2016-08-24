@@ -85,3 +85,17 @@ ref:
 ### vim有几个插件管理工具.
 * [egalpin/apt-vim](https://github.com/egalpin/apt-vim)
 * [tpope/vim-pathogen](https://github.com/tpope/vim-pathogen)
+
+### 重新加载`.vimrc`配置
+If you're editing it, you can reload it with:
+```
+:so %
+```
+% stands for current file name (see :h current-file) and :so is short for :source, which reads the content of the specified file and treats it as Vim code.
+
+In general, to re-load the currently active .vimrc, use the following (see Daily Vim):
+
+```
+:so $MYVIMRC
+```
+
