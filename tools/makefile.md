@@ -113,3 +113,9 @@ This acts like include in every way except that there is no error (not even a wa
 
 For compatibility with some other make implementations, sinclude is another name for -include.
 ```
+
+### GNU Make有很多隐式的规则和变量
+[Using Implicit Rules](https://www.gnu.org/software/make/manual/html_node/Implicit-Rules.html)
+* 隐式变量:
+  * `CC`: default cc
+* 后缀规则:
