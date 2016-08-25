@@ -12,7 +12,7 @@
   它的目标是通过MVC模式（MVC）功能增强基于浏览器的应用，使开发和测试变得更加容易。
 * React Native
 
-?服务端的开发, 通常针对特性的应用场景, 会有相应的成熟的框架?
+???服务端的开发, 通常针对特性的应用场景, 会有相应的成熟的框架?
 * IM应用
   * OpenFire + Smack + Spark
     * [OpenFire](https://en.wikipedia.org/wiki/Openfire), 
@@ -23,7 +23,19 @@
   *
 * 电商
 * 社交
-* 
 
 ### 什么是Spark?
+
+### 建个Blog?
+1. 直接选个网站上写~
+2. 放在GitHub的系统里
+3. 自己选个服务器,选个Blog系统,(WordPress, Heli?)
+...
+
+### OpenCL?
+
+### OpenCV?
+
+### OpenGL/OpenGL ES?
+
 
