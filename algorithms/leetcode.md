@@ -27,7 +27,7 @@ https://leetcode.com/problems/search-for-a-range/
 * 是不是用DP写会快??
 * 非递归写法会快?
 
-## 99. Recover Binary Search Tree (Hard)
+## ???99. Recover Binary Search Tree (Hard)
 * 二叉查找树(Binary Search Tree)
   * 左子树的所有节点比根节点小,右子树的节点值比根节点大
   * 左右子树也是二叉查找树
@@ -38,3 +38,13 @@ https://leetcode.com/problems/search-for-a-range/
   * 任意节点的左、右子树也分别为二叉查找树；
   * 没有键值相等的节点。
 * 前序遍历这课树,
+
+## ???[239. Sliding Window Maximum (Hard)](https://leetcode.com/problems/sliding-window-maximum/)
+* 对所有长度为k的子序列, 遍历这个k个元素求最大值. O((n-k)k)
+* 运用堆, 对所有长度为k的子序列,删除一元素, 插入一个新元素, 取最大值. O((n-k)lgk)
+* 使用**Monotone priority queue**,
+  >Wiki:a monotone priority queue is a variant of the priority queue abstract data type
+  C++有个实现是`deque`,它只是双端队列.
+  这道题的特点,需要删除队首元素,和删除队尾元素.
+  还有点插入排序的思想,保证队列是从大到小的队列.
+* 循环常量: deque中的元素都是从大到小排列的.
