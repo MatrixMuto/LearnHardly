@@ -1,4 +1,4 @@
-##virtual
+## virtual
 ```cpp
 class IInterface : public virtual RefBase
 ```
@@ -10,4 +10,15 @@ class IInterface : public virtual RefBase
 [StackOverflow](http://stackoverflow.com/a/21607)
 多重继承时..
 
-##template是模板概念的一个标识符.
+## template是模板概念的一个标识符.
+
+## const大法
+``` c
+const int a;
+const int *b;
+int* const c;
+const int * const d;
+```
+
+constextp :　常量表达式
+

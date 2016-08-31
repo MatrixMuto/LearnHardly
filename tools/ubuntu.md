@@ -124,7 +124,7 @@ http://everythinglinux.org/rsync/
   * `~/.local/share/applications`
 * 但是Android Studio的程序的Title改不掉..
 
-###给Ubuntu换个Theme..
+### 给Ubuntu换个Theme..
 * 参考[链接](http://sourcedigit.com/9432-top-10-best-custom-themes-ubuntu-14-04/)
 * 有名的就是`Numix`了..
 * 步骤
@@ -140,5 +140,9 @@ http://everythinglinux.org/rsync/
   sudo apt-get install numix-wallpaper-notd
   ```
   3. 再用DASH打开`unity tweak tool`,在里面选上想要的Theme就好了.
+* 升级到`16.04`的话,需要重新再安装一下.
+  ```
+  sudo apt-get install numix-gtk-theme
+  ```
 
 
