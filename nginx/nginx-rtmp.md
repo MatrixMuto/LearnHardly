@@ -58,7 +58,7 @@
 0078 };
 ```
 ###nginx-rtmp-module的整体的框架是?
-这个项目有多个nginx module组成.
+这个项目由多个nginx module组成.
 这里需要先介绍一下nginx的模块化设计的东西:
 * 每个模块肯定会定义**ngx_module_t**类型的全局结构体.
   * 例如*ngx_rtmp.c*中

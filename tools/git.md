@@ -200,4 +200,8 @@ git push origin master
 # Pushes the changes in your local repository up to the remote repository you specified as the origin
 ```
 
-##`git pull --rebase`什么作用?
+## `git pull --rebase`什么作用?
+## 不克隆历史
+```
+git clone --depth=1 <uri>
+```

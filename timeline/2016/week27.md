@@ -170,7 +170,7 @@ It is short for vertical synchronization, an optional setting on your graphics c
 ffmpeg -re -i ~/Videos/test.flv -f flv -rtmp_playpath test -rtmp_app live rtmp://localhost:1935/
 ```
 
-###给树莓派装系统
+### 给树莓派装系统
 [Link](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
 基本就几步
 * 下载镜像
