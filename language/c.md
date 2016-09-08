@@ -24,7 +24,22 @@ In edge-triggered mode, however, epoll_wait will return only once new data is wr
 level-triggered, 你没把数据读完,下次循环epoll_wait, 会立即返回.
 edge-triggered, 只有新的数据事件, 才会让下次epoll_wait触发.
 
+### select和poll的区别
+[the answer](https://daniel.haxx.se/docs/poll-vs-select.html)
+libevent,libev
+* 功能上
+  * 提供的基本功能基本上一样
+  * 不同点
+    * 传入的文件描述符数组,select会破坏,poll不会
+    * 
+    * 
+    * timeout不一样,poll用的是毫秒值,select用的是timeval结构体指针,提供微秒级,一般不会有实质性不同.
+* 速度上
 
+* 可移植性
+  * seclect比poll稍微好一些.
+* 复杂性
+  * 用事件模型编程都会让程序变得复杂.
 
 ###那些类型和头文件
 
@@ -101,6 +116,43 @@ typedef __fsid_t fsid_t;
 
 ###strict-aliasing
 在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
+[中文](http://blog.kongfy.com/2015/09/strict-aliasing%EF%BC%8C%E7%A5%9E%E5%9D%91%EF%BC%9F/)
+[英文](http://dbp-consulting.com/tutorials/StrictAliasing.html)
+这是一个优化选项.
+告诉编译器,我们严格遵守strict-aliasing规则.
+你优化吧.
+
+不同类型的别名,不会指向同一个内存区域.
+
+
+###semaphore 信号量
+* 在native-codec的例子里, 有个一个消息队列是用线程和信号量一起实现的, 用到的数据结构是单链表.
+* semaphore的api有如下
+  * sem_t
+    类型
+  * sem_init
+  ```c
+       #include <semaphore.h>
+
+       int sem_init(sem_t *sem, int pshared, unsigned int value)
+  ```
+  * sem_post
+  * sem_wait
+  ```c
+    int sem_wait(sem_t *sem);
+
+    int sem_trywait(sem_t *sem);
+
+    int sem_timedwait(sem_t *sem, const struct timespec *abs_timeout);
+  ```
+  * sem_destroy
+* 消息队列用信号量的原因, 生产者-消费者模型.
+* 那跟pthread_mutex, pthread_condition有说明区别? 这是个可以很深入的问题.
+>semaphores have a synchronized counter and mutex's are just binary (true / false).
+
+>A semaphore is often used as a definitive mechanism for answering how many elements of a resource are in use -- e.g., an object that represents n worker threads might use a semaphore to count how many worker threads are available.
+
+>Truth is you can represent a semaphore by an INT that is synchronized by a mutex
 
 ---
 ###参数列表

@@ -40,3 +40,21 @@ struct sockaddr_in
 
 
 ###TCP选项
+
+###信号处理
+* 数据结构有哪些
+
+* 接口有哪些
+
+###信号量
+* 信号量有哪些?
+  - terminal 会生产信号
+  - 硬件异常(除0,无效内存引用(SIGSEGV))
+  - kill(2)
+  - kill(1)
+  - Software conditions. 如*SIGURG*,*SIGPIPE*,*SIGALRM*
+* 信号量有哪些处理方式?
+  - 忽略. 不能忽略*SIGKILL*,*SIGSTOP*.
+  - 捕获. 不能捕获*SIGKILL*,*SIGSTOP*.
+  - 默认处理.
+* 常用信号详解

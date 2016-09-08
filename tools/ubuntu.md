@@ -117,3 +117,32 @@ http://everythinglinux.org/rsync/
 [StackOverflow](http://askubuntu.com/questions/369284/install-grub2-on-uefi-gpt-create-boot-partition-and-transfer-clonezilla-image)
 
 [Managing EFI Boot Loaders for Linux](http://www.rodsbooks.com/efi-bootloaders/)
+
+###给Android Studio添加Launcher Shortcut.
+* Ubuntu有两个目录,里面存着很多程序的快捷方式.
+  * `/usr/share/Applications/`
+  * `~/.local/share/applications`
+* 但是Android Studio的程序的Title改不掉..
+
+### 给Ubuntu换个Theme..
+* 参考[链接](http://sourcedigit.com/9432-top-10-best-custom-themes-ubuntu-14-04/)
+* 有名的就是`Numix`了..
+* 步骤
+  1. 安装一些工具
+  ```
+  sudo apt-get install unity-tweak-tool gnome-tweak-tool
+  ```
+  2. 安装想要的主题
+  ```
+  sudo add-apt-repository ppa:numix/ppa 
+  sudo apt-get update 
+  sudo apt-get install numix-gtk-theme numix-icon-theme-circle 
+  sudo apt-get install numix-wallpaper-notd
+  ```
+  3. 再用DASH打开`unity tweak tool`,在里面选上想要的Theme就好了.
+* 升级到`16.04`的话,需要重新再安装一下.
+  ```
+  sudo apt-get install numix-gtk-theme
+  ```
+
+

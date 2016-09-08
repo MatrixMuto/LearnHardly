@@ -208,7 +208,7 @@ Streaming Server应用场景
 
 ##<推流端>方案选择?
 * OBS
-  * LICENSENSE
+  * LICENSE
   * 功能 
   * 平台
     * Linux

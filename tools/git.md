@@ -170,3 +170,38 @@ git rm -rf <dir>
 * 这样会产生什么问题?
   * 提交的时候Git会再把CRLF转换回LR吗?
 * 有什么好的方式处理这些问题?
+
+###清理工作目录的命令
+```shell
+git clean -f -d -x #git clean是删除没有被tracked的那些文件和目录
+git checkout -f    #可以把修改过的tracked的文件强制还原
+```
+
+###缓存密码
+[Caching your GitHub password in Git](https://help.github.com/articles/caching-your-github-password-in-git/)
+默认时间15分钟.
+```shell
+git config --global credential.helper cache
+git config --global credential.helper 'cache --timeout=3600'
+```
+
+###把已经存在的仓库,加到GitHub上
+[把已经存在的仓库,加到GitHub上](https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/)
+
+```shell
+git init
+git add .
+git commit -m "init"
+git remote add origin <remote repository URL>
+# Sets the new remote
+git remote -v
+# Verifies the new remote URL
+git push origin master
+# Pushes the changes in your local repository up to the remote repository you specified as the origin
+```
+
+## `git pull --rebase`什么作用?
+## 不克隆历史
+```
+git clone --depth=1 <uri>
+```

@@ -117,7 +117,7 @@ ffmpeg/libavformat/matroskadec.c:1395: undefined reference to `BZ2_bzDecompressI
 int av_read_frame(AVFormatContext *s, AVPacket *pkt);
 ```
 
-###error: ‘for’ loop initial declarations are only allowed in C99 mode
+### error: ‘for’ loop initial declarations are only allowed in C99 mode
 ```
 main.c:28:2: error: ‘for’ loop initial declarations are only allowed in C99 mode
   for (int i=0;i<10;i++)
@@ -125,20 +125,20 @@ main.c:28:2: error: ‘for’ loop initial declarations are only allowed in C99 
 main.c:28:2: note: use option -std=c99 or -std=gnu99 to compile your code
 ```
 
-###[hls,applehttp @ 0x27930e0] Invalid timestamps stream=2, pts=921021, dts=924024, size=497
+### [hls,applehttp @ 0x27930e0] Invalid timestamps stream=2, pts=921021, dts=924024, size=497
 出这个log的原因是,ffmpeg的代码上有一个dts和pts的判断,如果pts小于dts的话,就会输出这行.
 需要pts和dts的基础来解释这个...
 * pts在多媒体框架中有什么作用?
 * dts
 
-###avformat_open_input对hls协议的open流程是怎么样的?
+### avformat_open_input对hls协议的open流程是怎么样的?
 以及avformat的角色...
 
-###VSYNC是个啥?
+### VSYNC是个啥?
 *在ffmpeg.h里也看到了VSYNC这个玩意,之前是在android的graphics看到.*
 vsync应该是一个硬件上的东西,很可能是display驱动发出来的信号?
 >What Is V-Sync?
-It's short for vertical synchronization, an optional setting on your graphics card that throttles the frames being drawn to match the number of times your monitor refreshes itself every second.
+It is short for vertical synchronization, an optional setting on your graphics card that throttles the frames being drawn to match the number of times your monitor refreshes itself every second.
 
 * [Android中的VSYNC](https://source.android.com/devices/graphics/implement.html)
 
@@ -148,16 +148,16 @@ It's short for vertical synchronization, an optional setting on your graphics ca
 * PPS
 * VPS
 
-###avformat_open_init
+### avformat_open_init
 此函数主要通过|init_input|完成功能
 
 
-###ssh终端和串口终端有什么区别?
+### ssh终端和串口终端有什么区别?
 因为我用ssh终端,可能无法显示什么东西出来?
 
-###作为capturer/broadcaster不同的帧率,pts,dts值怎么填?
+### 作为capturer/broadcaster不同的帧率,pts,dts值怎么填?
 
-###网络摄像头功能:图像侦测,声音侦测
+### 网络摄像头功能:图像侦测,声音侦测
 怎么把这个功能实现到摄像头端,服务器端,播放端?
 
 ###Segmentation fault (core dumped)
@@ -170,7 +170,7 @@ It's short for vertical synchronization, an optional setting on your graphics ca
 ffmpeg -re -i ~/Videos/test.flv -f flv -rtmp_playpath test -rtmp_app live rtmp://localhost:1935/
 ```
 
-###给树莓派装系统
+### 给树莓派装系统
 [Link](https://www.raspberrypi.org/documentation/installation/installing-images/linux.md)
 基本就几步
 * 下载镜像
