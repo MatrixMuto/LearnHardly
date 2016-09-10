@@ -21,3 +21,6 @@
    sudo dd bs=4M if=2016-05-27-raspbian-jessie.img of=/dev/sd*x*
   ```
 * sync一下
+
+### 树莓派开源仓库
+[raspberrypi](https://github.com/raspberrypi)

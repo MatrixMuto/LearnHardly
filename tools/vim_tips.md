@@ -76,7 +76,7 @@ ref:
 
 ### Vim怎么执行shell命令?
 * 可以`Ctrl+Z`切到Shell中敲.
-
+- `:!<cmd>`
 ### VIMRUNTIME是什么??
 
 ### `~/.vim`目录干嘛的?
@@ -101,3 +101,6 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 ### vim stuck
 在`Insert`模式，按过`Ctrl+s`，会僵掉，按`ctrl+q`可以解。
 这俩键可看[Software flow control](https://en.wikipedia.org/wiki/Software_flow_control)
+
+### vim recording
+- 在Normal模式按q可以取消。
