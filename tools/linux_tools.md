@@ -8,9 +8,11 @@
  ls -S    #按文件大小
 ```
 ---
-###grep
+## grep
 > 须看看AOSP中*source build/envsetup.sh*中,实现的脚本函数,*cgrep,jgrep*等等,里面用到了*grep,find*
 
+- grep 指定类型(后缀)的文件
+  `grep --include \*.cpp`
 ---
 ###netstat
   > netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multi‐cast memberships

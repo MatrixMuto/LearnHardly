@@ -104,3 +104,8 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 
 ### vim recording
 - 在Normal模式按q可以取消。
+
+## 插件*YouCompleteMe*
+[网站](https://valloric.github.io/YouCompleteMe/)
+需要有一个install过程
+

@@ -21,3 +21,16 @@ gdb工具可以用这个文件还原奔溃时的进程状态。
 
 ## 程序的编译和执行 
 代码到汇编，汇编到目标文件，目标文件到可执行文件，可执行文件到进程。
+
+## "boost/system/system_error.hpp:70"会Crash
+```
+boost::system::error_code error;
+throw boost::system::system_error(error);
+
+std::cerr << e.what() << std::endl;
+```
+
+## 怎么Debug进catch block?为什么要手动在Catch块中加断点,才会Debug进去?
+
+## 哪里去找*boost system error_code.hpp* 里面 *system_category*的实现啊???它调的是std::system_category??
+
