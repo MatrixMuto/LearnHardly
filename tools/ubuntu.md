@@ -145,4 +145,10 @@ http://everythinglinux.org/rsync/
   sudo apt-get install numix-gtk-theme
   ```
 
+## 启动自动加载swap分区
+- `blkid`看分区状态
+- 修改`/etc/fstab`文件
 
+## Bash->Profile里可以修改字体和大小, 这样vim就可以显示更多代码了...
+
+## 用vim的make命令, 完了之后, 它会帮你跳到第一个waring/error的代码位置...

@@ -72,8 +72,7 @@ Chunking allows large messages at the higher-level protocol to be
 broken into smaller messages, for example to prevent large low-
 priority messages (such as video) from blocking smaller high-priority
 messages (such as audio or control).
-这里举例说明，ａｕｄｉｏ会优先于ｖｉｄｅｏ被传输．
-
+这里举例说明，audio会优先于video被传输．
 
 * User Control Message Events
 这个消息类型是 Client和Server用来给对方发事件,有以下7个
@@ -84,3 +83,5 @@ SetBuffer Length(3)    Client->Server
 StreamIs Recorded(4) Server->Client
 PingRequest(6)            Server->Client
 PingResponse(7)          Client->Server
+
+## Chunking有中4种Type的Message Header, 分别在什么时候用?

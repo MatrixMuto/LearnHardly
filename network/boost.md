@@ -19,6 +19,10 @@ tcp::socket
 ## write data
 
 ## read data
-
+- socket::read_some
+- socket::receive
+- asio::read
+  这个函数可以读满buffer,再返回
+  
 ## 
 

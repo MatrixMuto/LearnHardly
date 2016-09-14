@@ -10,6 +10,10 @@
 
 
 ### cscope
+- 用`find`生成一个`cscope.files`
+- 执行`cscope -b`生成符号数据库文件`cscope.out`
+- 在vim中执行`cs find c| <name>`查找
+
 * cs find
 ```
 :cs find e <reg>
@@ -109,3 +113,4 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 [网站](https://valloric.github.io/YouCompleteMe/)
 需要有一个install过程
 
+## 剪切一行
