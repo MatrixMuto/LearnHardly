@@ -114,3 +114,8 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 需要有一个install过程
 
 ## 剪切一行
+
+## 编译Vim8
+```
+./configure --with-features=big --enable-multibyte --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-cscope
+``` 

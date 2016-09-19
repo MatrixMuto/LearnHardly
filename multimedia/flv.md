@@ -1,5 +1,5 @@
 *FLV在RTMP中用到*
-[文档]()
+[文档](https://www.adobe.com/content/dam/Adobe/en/devnet/flv/pdfs/video_file_format_spec_v10.pdf)
 
 ###FLV文件结构
 HEADER

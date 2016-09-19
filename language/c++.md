@@ -79,3 +79,19 @@ rtmp.cpp:17:16: error: call to implicitly-deleted default constructor of 'RRtmpC
 ```
 
 ## C++ throw相关
+
+## boost regex
+
+遇到的编译错误
+undefined reference to `boost::basic_regex
+
+-lboost_regex 
+
+`boost::regex exrp( "^(?:http://)?([^/]+)(?:/?.*/?)/(.*)$" );`
+
+^ 匹配字符串的开始位置
+(?: exp) 匹配exp,不捕获匹配的文本，也不给此分组分配组号
+? 0次或1次
+([^/]+)除'/'外的字符一次或多次,组号有
+
+
