@@ -119,3 +119,7 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 ```
 ./configure --with-features=big --enable-multibyte --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-cscope
 ``` 
+
+## 看目前存在的宏有哪些?
+
+## vim有时侯,只能用del删除tab,而不能用backspace,为什么..

@@ -152,3 +152,15 @@ http://everythinglinux.org/rsync/
 ## Bash->Profile里可以修改字体和大小, 这样vim就可以显示更多代码了...
 
 ## 用vim的make命令, 完了之后, 它会帮你跳到第一个waring/error的代码位置...
+
+## linux 打开和关闭回显
+```
+stty -echo
+stty echo
+```
+
+## ...Linux有遇到一个命令,`xxxx`,但用`find`却怎么也找不到...
+原来`xxxx`是一个别名~~~
+`type xxxx`可以看这个是什么东西..
+linux的别名是保存在哪里的呢?或者其实是自动执行了某个脚本,所以就有这个别名了?
+

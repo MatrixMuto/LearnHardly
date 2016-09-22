@@ -20,3 +20,5 @@ export GYP_DEFINES="OS=android"
   ```
   git pull
   ```
+
+## GYP_DEFINES的定义影响哪些命令?
