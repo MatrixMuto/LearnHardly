@@ -30,7 +30,7 @@ public:
 };
 ```
 
-## Hitachi板子连接Wi-Fi
+## 嵌入式板子连接Wi-Fi
 [参考链接](https://www.olimex.com/forum/index.php?topic=3892.0)
 - 加载Wi-Fi模块
 
@@ -111,5 +111,5 @@ public:
           collisions:0 txqueuelen:1000 
           RX bytes:2630 (2.5 KiB)  TX bytes:2268 (2.2 KiB)
   ```
-- 可以启动`Start_moldau`了
+- 可以启动程序了
 
