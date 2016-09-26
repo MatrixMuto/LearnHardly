@@ -336,3 +336,8 @@ https://www.ffmpeg.org/doxygen/2.7/remuxing_8c-example.html#_a3
 * 但我依旧不知道data的数据结构...
 * 最终是通过直接看data数据的hex流,**发(xia)现(cai)**出,一个AVPacket,有可能是多个NAL unit
 * 从代码上, 我依旧不知道,AVPacket的生产,经历了几个流程. {TODO}
+
+## FFmpeg的交叉编译
+- 目标平台Android
+
+- 目标平台RPi

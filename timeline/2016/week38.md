@@ -1,4 +1,15 @@
+*2016.9.19 - 2016.9.25*
 
+## TODO
+- port ffmpeg to RPi
+- compile RPi kernel and flash
+- qemu-system-arm work with gdb
+- h.264
+- rrtmp project
+- libx264
+- webrtc
+
+## adlna stack
 TVUPNP_EnableAutoMonitorNetIf
 
 ATVUPNPIfMonitor
@@ -113,3 +124,33 @@ public:
   ```
 - 可以启动程序了
 
+## 嵌入式板子怎么用gdb/gdbserver调试
+- 一种是远程调试,Target上跑gdbserver,Host上跑`gdb`连过去
+  `gdbserver`支持串口和TCP,估计TCP用的比较多
+  在target上执行`gdbserver IP:PORT program`, 这样`gdbserver`就在监听状态了
+  在host上,用cross-gdb去连上target
+  `gdb`
+  `gdb> target remote IP:PORT`
+  但是还是没有debug符号~~
+
+- 一种是直接在Target上跑gdb
+  - 出错一:这个错误可能居然`continue`还能跑~
+  ```
+  (gdb) r
+  Starting program: /usr/Federer/main_app/moldau.elf 
+  warning: File "/lib/libthread_db-1.0.so" auto-loading has been declined by your `auto-load safe-path' set to "$debugdir:$datadir/auto-load".
+  To enable execution of this file add
+          add-auto-load-safe-path /lib/libthread_db-1.0.so
+  line to your configuration file "/home/root/.gdbinit".
+  To completely disable this security protection add
+          set auto-load safe-path /
+  line to your configuration file "/home/root/.gdbinit".
+  For more information about this security protection see the
+  "Auto-loading safe path" section in the GDB manual.  E.g., run from the shell:
+          info "(gdb)Auto-loading safe path"
+  warning: Unable to find libthread_db matching inferior's thread library, thread debugging will not be available.
+
+  Program received signal SIGILL, Illegal instruction.
+  0x764550e8 in ?? () from /lib/libcrypto.so.1.0.0
+  ```
+  - 问题:无法查看源代码~,所以还是推荐用`gdbserver`,但看看调用堆栈还是可以的.
