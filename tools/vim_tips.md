@@ -123,3 +123,6 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 ## 看目前存在的宏有哪些?
 
 ## vim有时侯,只能用del删除tab,而不能用backspace,为什么..
+
+## vim并不支持给函数名,变量名的上颜色..
+
