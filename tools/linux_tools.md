@@ -8,9 +8,11 @@
  ls -S    #按文件大小
 ```
 ---
-###grep
+## grep
 > 须看看AOSP中*source build/envsetup.sh*中,实现的脚本函数,*cgrep,jgrep*等等,里面用到了*grep,find*
 
+- grep 指定类型(后缀)的文件
+  `grep --include \*.cpp`
 ---
 ###netstat
   > netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multi‐cast memberships
@@ -69,3 +71,11 @@ tcpdump -i lo tcp port 1935 -w /tmp/001-unnamed.pcap
   ls -i TCP:1935
   ```
   像看nginx进程的话,需要加上sudo
+
+## curl
+- 设置代理既可以通过命令行,也可以通过~/.curlrc配置文件.
+  配置文件里设置的话, 把选项转换一下就好
+  ```
+  socks5-hostname = 127.0.0.1:1080
+  ```
+  等价于`curl --socks5-hostname 127.0.0.1"

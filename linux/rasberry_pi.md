@@ -21,3 +21,17 @@
    sudo dd bs=4M if=2016-05-27-raspbian-jessie.img of=/dev/sd*x*
   ```
 * sync一下
+
+### 树莓派开源仓库
+[raspberrypi](https://github.com/raspberrypi)
+
+## 终于找到编译Kernel的指导了
+[Guide](https://www.raspberrypi.org/documentation/linux/kernel/building.md)
+- 在树莓派上编译
+
+- 交叉编译
+  - 安装工具链
+  - make config文件
+  - make 一些目标
+  - 更新到镜像中
+  

@@ -10,6 +10,10 @@
 
 
 ### cscope
+- 用`find`生成一个`cscope.files`
+- 执行`cscope -b`生成符号数据库文件`cscope.out`
+- 在vim中执行`cs find c| <name>`查找
+
 * cs find
 ```
 :cs find e <reg>
@@ -76,7 +80,7 @@ ref:
 
 ### Vim怎么执行shell命令?
 * 可以`Ctrl+Z`切到Shell中敲.
-
+- `:!<cmd>`
 ### VIMRUNTIME是什么??
 
 ### `~/.vim`目录干嘛的?
@@ -101,3 +105,24 @@ In general, to re-load the currently active .vimrc, use the following (see Daily
 ### vim stuck
 在`Insert`模式，按过`Ctrl+s`，会僵掉，按`ctrl+q`可以解。
 这俩键可看[Software flow control](https://en.wikipedia.org/wiki/Software_flow_control)
+
+### vim recording
+- 在Normal模式按q可以取消。
+
+## 插件*YouCompleteMe*
+[网站](https://valloric.github.io/YouCompleteMe/)
+需要有一个install过程
+
+## 剪切一行
+
+## 编译Vim8
+```
+./configure --with-features=big --enable-multibyte --enable-pythoninterp --with-python-config-dir=/usr/lib/python2.7/config-x86_64-linux-gnu --enable-cscope
+``` 
+
+## 看目前存在的宏有哪些?
+
+## vim有时侯,只能用del删除tab,而不能用backspace,为什么..
+
+## vim并不支持给函数名,变量名的上颜色..
+
