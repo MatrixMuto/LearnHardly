@@ -25,3 +25,5 @@ Luna
 
 ### 改Eclipse主题
 Eclipse menu -> Help -> Eclipse Marketplace, search "Eclipse Color Theme Plugin"
+
+### 设置宏的值
