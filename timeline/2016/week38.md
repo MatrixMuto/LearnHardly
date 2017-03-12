@@ -10,6 +10,16 @@
 - webrtc
 
 ## adlna stack
+
+TVUPNP_EnableAutoMonitorNetIf
+
+ATVUPNPIfMonitor
+启动定时重复任务`UTaskManager`每2秒,任务会回调这个类的函数.
+收到消息时,相应改变全局的Ip地址管理类`WorkingIpAddrManager`
+
+
+UTaskManager NetIfMonitorTask
+
 - `GetSelfIplist`飞
   在Linux上, 这个函数依赖`SIOCGIFCONF`, `SIOCGIFADDR`, `SIOCGIFNETMASK`获取IP和子网掩码
   - SIOCGIFCONF
@@ -23,9 +33,21 @@
 
 
 - UTaskManager NetIfMonitorTask
+
 在DoInit中,获取IP列表
 在DoRun中,也会获取Ip列表(调用`GetSelfIplist`)
 将上一次的ip列表,与新获取的ip列表坐比对.
+
+
+WorkingIpAddrManager
+在这个类中
+Add和Remove会通知它的Listener关于Ip的改变消息
+
+Listener有哪些...
+是通过
+`MRESULT CtrlPoint::Start(MLong lSsdpPort)`
+
+反正会调用
 
 - WorkingIpAddrManager
 在这个类中
@@ -36,6 +58,7 @@ Add和Remove会通知它的Listener关于Ip的改变消息
 `MRESULT CtrlPoint::Start(MLong lSsdpPort)`
 
 会调用
+
 ```
 class MNetIfListener
 {

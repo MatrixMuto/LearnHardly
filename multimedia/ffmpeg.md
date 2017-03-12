@@ -1,14 +1,13 @@
-<<<<<<< Updated upstream
 ###FFmpeg文档翻译
 [Link](https://wanglongqi.github.io/tools/2015/02/13/ffmpegcn/)
-=======
+
 #达到什么样的目标.
 因为FFmpeg是个超大的开源软件体..需要花超多的时间来完全掌握.
 如果目标不明确,会浪费很多时间...
 * 熟悉软件应用
 * 熟悉框架
 * 熟悉常用的模块
->>>>>>> Stashed changes
+
 
 ##如何进行configure
   1. 为什么没有ffplay?
@@ -342,6 +341,7 @@ https://www.ffmpeg.org/doxygen/2.7/remuxing_8c-example.html#_a3
 
 - 目标平台RPi
 
+
 ## `ffmpeg`命令部分
 
 ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
@@ -363,3 +363,4 @@ ffmpeg -s 1920x1080 -vcodec h264  -i /dev/video0 -b 2000000 -f flv rtmp://localh
 - 截取屏幕
 - 本地文件
 - 流媒体文件
+
