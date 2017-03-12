@@ -1,14 +1,13 @@
-<<<<<<< Updated upstream
 ###FFmpeg文档翻译
 [Link](https://wanglongqi.github.io/tools/2015/02/13/ffmpegcn/)
-=======
+
 #达到什么样的目标.
 因为FFmpeg是个超大的开源软件体..需要花超多的时间来完全掌握.
 如果目标不明确,会浪费很多时间...
 * 熟悉软件应用
 * 熟悉框架
 * 熟悉常用的模块
->>>>>>> Stashed changes
+
 
 ##如何进行configure
   1. 为什么没有ffplay?
@@ -146,26 +145,26 @@ ffmpeg -i 20130312_133313.mp4 -codec copy -bsf: h264_mp4toannexb -f h264 2013031
 ```
 
 #工程编译
-##configure
+## configure
 * --disable-all 其他的模块都不会编译了,但是会编译libavutil.a
 
 * 会生成 *config.mak* 文件, 被 *Makefile* 引用, 包含很多宏定义.
   * CC
 * 会生成 *.config* 文件, 在Makefile里,被用来生成 *config.h*.
 
-##config.mak
+## config.mak
 * 文件中有很多'!'开头的行.
     在Makefile中,'!'与其他字符一样,是变量名的一部分~,
     ```makefile
     !CONFIG_DECODERS=yes # 只是定义了个变量而已, CONFIG_DECODERS会是''
     ```
 * 
-##Makefile
+## Makefile
 
 
-##common.mak
+## common.mak
 
-##porting到Android的方式
+## porting到Android的方式
 * [yixia/FFmpeg-Android](https://github.com/yixia/FFmpeg-Android)
 
 ```sh
@@ -327,7 +326,7 @@ https://www.ffmpeg.org/doxygen/2.7/demuxing_decoding_8c-example.html#_a25
 https://www.ffmpeg.org/doxygen/2.7/filtering_video_8c-example.html#_a73
 https://www.ffmpeg.org/doxygen/2.7/remuxing_8c-example.html#_a3
 
-###AVPacket中的data
+### AVPacket中的data
 用FFmpeg调试rtmp流时遇到问题
 * 直接将{data,size}送给decode, 不行..
   * 1.我不知道data是啥数据就瞎送...
@@ -341,3 +340,27 @@ https://www.ffmpeg.org/doxygen/2.7/remuxing_8c-example.html#_a3
 - 目标平台Android
 
 - 目标平台RPi
+
+
+## `ffmpeg`命令部分
+
+ffmpeg [options] [[infile options] -i infile]... {[outfile options] outfile}...
+
+
+ffmpeg -i /dev/video0 -f flv rtmp://localhost/live/test
+
+ffplay -probesize 8000 -fflags nobuffer rtmp://172.17.196.3:1935/live/test
+
+
+## ffmpeg logitch c920 low fps full hd
+
+ffmpeg -s 1920x1080 -vcodec h264  -i /dev/video0 -b 2000000 -f flv rtmp://localhost/live/test
+
+在指定输入的时候, 设置上video的格式, 这样c920就能压缩好的数据进来?
+
+## ffmpeg输入设定篇
+- 采集设备
+- 截取屏幕
+- 本地文件
+- 流媒体文件
+
