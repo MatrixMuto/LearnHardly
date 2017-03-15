@@ -7,8 +7,25 @@ init clock (video,audio,ext)
 开启read_thread线程
 
 ####线程read_thread:
+    
+- 初始化
+    AVFormatContext *ic = NULL;
+    ic = avformat_alloc_context();
 
+-  设置是否允许调用阻塞的方法
+        ic->interrupt_callback.callback = decode_interrupt_cb;
+        ic->interrupt_callback.opaque = is;
 
+-   打开文件
+       err = avformat_open_input(&ic, is->filename, is->iformat, &format_opts);
+- 
+        av_format_inject_global_side_data(is);
+
+- 设置参数
+        opts = setup_find_stream_info_opts(ic, codec_opts);
+- 获取stream信息     
+    err = avformat_find_stream_info(ic, opts);
+    
 2. 事件循环的过程
 
 event_loop(is);
