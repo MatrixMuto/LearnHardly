@@ -49,4 +49,10 @@ event_loop(is);
     if (!is->paused && get_master_sync_type(is) == AV_SYNC_EXTERNAL_CLOCK && is->realtime)
         check_external_clock_speed(is);
  如果 非暂停 且 同步类型是EXT时钟 且 现在是实时播放, 就检查一下EXT时钟倍速.is->av_sync_type = av_sync_type;read_thread
-  
+
+
+
+#### avformat/mov.c
+static int mov_read_default(MOVContext *c, AVIOContext *pb, MOVAtom atom)
+
+atom代表当前的container
