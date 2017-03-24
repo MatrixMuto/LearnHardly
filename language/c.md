@@ -1,4 +1,4 @@
-###epoll
+### epoll
 * 相关的manunal
   ```shell
   man epoll        #It has Sample Code
@@ -6,19 +6,19 @@
 
   ```
 * epoll_create
-  * 
+  *
 * epoll_ctl
   * EPOLL_CTL_ADD
 * epoll_wait
 
 >Triggering modes
-epoll provides both edge-triggered and level-triggered modes. 
-In edge-triggered mode, a call to epoll_wait will return only when a new event is enqueued with the epoll object, 
+epoll provides both edge-triggered and level-triggered modes.
+In edge-triggered mode, a call to epoll_wait will return only when a new event is enqueued with the epoll object,
 while in level-triggered mode, epoll_wait will return as long as the condition holds.
-For instance, if a pipe, registered with epoll, has received data, a call to epoll_wait will return, 
-signaling the presence of data to be read. Suppose the reader only consumed part of data from the buffer. 
-In level-triggered mode, further calls to epoll_wait will return immediately, 
-as long as the pipe's buffer contains data to be read. 
+For instance, if a pipe, registered with epoll, has received data, a call to epoll_wait will return,
+signaling the presence of data to be read. Suppose the reader only consumed part of data from the buffer.
+In level-triggered mode, further calls to epoll_wait will return immediately,
+as long as the pipe's buffer contains data to be read.
 In edge-triggered mode, however, epoll_wait will return only once new data is written to the pipe.
 
 level-triggered, 你没把数据读完,下次循环epoll_wait, 会立即返回.
@@ -31,8 +31,8 @@ libevent,libev
   * 提供的基本功能基本上一样
   * 不同点
     * 传入的文件描述符数组,select会破坏,poll不会
-    * 
-    * 
+    *
+    *
     * timeout不一样,poll用的是毫秒值,select用的是timeval结构体指针,提供微秒级,一般不会有实质性不同.
 * 速度上
 
@@ -41,9 +41,9 @@ libevent,libev
 * 复杂性
   * 用事件模型编程都会让程序变得复杂.
 
-###那些类型和头文件
+### 那些类型和头文件
 
-###那些C语言们
+### 那些C语言们
 http://stackoverflow.com/a/17209532
 
 * K&R C, 1972-1989
@@ -55,11 +55,11 @@ http://stackoverflow.com/a/17209532
 * GNU C, 默认并没有什么标准, Linux Kernel,
 
 
-###c语言数据结构库
+### c语言数据结构库
 [回答](http://stackoverflow.com/questions/668501/are-there-any-open-source-c-libraries-with-common-data-structures)
 
 
-###<stdint.h>
+### <stdint.h>
 ```c
 /* Types for `void *' pointers.  */
 #if __WORDSIZE == 64
@@ -77,7 +77,7 @@ typedef unsigned int		uintptr_t;
 #endif
 ```
 
-###<netinet/in.h>
+### <netinet/in.h>
 
 ```c
 #include <features.h>
@@ -86,7 +86,7 @@ typedef unsigned int		uintptr_t;
 #include <bits/types.h>
 ```
 
-###<sys/types.h>定义了什么?
+### <sys/types.h>定义了什么?
 
 ```c
 #include <bits/types.h>
@@ -105,16 +105,17 @@ typedef __fsid_t fsid_t;
 #endif
 ```
 
-###为什么要这么来用这些类型?能解决什么跨平台的问题吗?
+
+### 为什么要这么来用这些类型?能解决什么跨平台的问题吗?
 比如ngx_int_t,u_char等.
 
-###size_t
+### size_t
 
-##Compiler
+## Compiler
 * gcc
 * arm-linux-androidabi-gcc
 
-###strict-aliasing
+### strict-aliasing
 在编译ffmpeg的android版本的时候,编译选项里有一个-Werror=strict-aliasing,[这个是stackoverflow的解答](http://stackoverflow.com/questions/98650/what-is-the-strict-aliasing-rule)
 [中文](http://blog.kongfy.com/2015/09/strict-aliasing%EF%BC%8C%E7%A5%9E%E5%9D%91%EF%BC%9F/)
 [英文](http://dbp-consulting.com/tutorials/StrictAliasing.html)
@@ -125,7 +126,7 @@ typedef __fsid_t fsid_t;
 不同类型的别名,不会指向同一个内存区域.
 
 
-###semaphore 信号量
+### semaphore 信号量
 * 在native-codec的例子里, 有个一个消息队列是用线程和信号量一起实现的, 用到的数据结构是单链表.
 * semaphore的api有如下
   * sem_t
@@ -216,7 +217,7 @@ __VA_ARGS__
 要想在这个宏里hook，怎么弄
 找了个例子，
 #define myprintf(...) printk("[lch]:File:%s, Line:%d, Function:%s," \  
-     __VA_ARGS__, __FILE__, __LINE__ ,__FUNCTION__); 
+     __VA_ARGS__, __FILE__, __LINE__ ,__FUNCTION__);
 
 这个例子里的宏替换又是个怎么替的。
 
@@ -240,5 +241,3 @@ int arr[10][10];
 arr[row_index][col_index];
 
 ```
-
-
