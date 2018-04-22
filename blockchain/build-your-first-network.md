@@ -1,4 +1,4 @@
-教程地址: http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html 
+﻿教程地址: http://hyperledger-fabric.readthedocs.io/en/latest/build_network.html 
 
 
 ./byfn.sh generate
